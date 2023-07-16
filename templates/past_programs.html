@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} past_programs {% endblock %}
+
+{% block extra_css %}
+    <link rel='stylesheet' href="{% static 'css/past_programs.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <section id="hero">
+        <img class="past_program_banner_img img-fluid" src="{% static 'img/past programs/Banner Image.jpg' %}" alt="">
+        <div class="overlay">
+            {% include 'includes/navbar1.html' %}
+
+            <div class="past_program_banner_content d-flex justify-content-center align-items-center">
+                <div class="container d-flex flex-column">
+                    <p class="past_program_heading mb-0">Unlock Innovation through</p>
+                    <p class="past_program_heading" style="color: #F58420;">Inspiring Projects</p>
+                    <p class="past_program_subheading">Explore the remarkable projects done by LearnHill Technologies. As the rapidly growing network of educators, students, and institutions, We creates extraordinary projects in coding, AI, robotics & more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="past_program_cards">
+        <h1 class="text-center my-5" style="font-size: 60px;"><span style="color: #F58420;">Past</span> Projects</h1>
+        <div class="container border  my-5 p-5 rounded">
+            <div class="row">
+                <div class="col-md-6 project-images">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/Home Page/AI coding lab 23.jpg' %}" alt="">
+                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/Home Page/Quiz Competition.jpg' %}" alt="">
+                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/Home Page/Club formation.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Fighting Gender Gap Among Future Creators with AI</h2>
+                    <p>Partnership with AWS Girl's Tech Day and Cloudroom US, Australia, Indonesia, India and UK</p>
+
+                    <div class="partner-logo">
+                        <img src="{% static 'img/Home Page/IIT Guwahati.jpeg' %}" alt="">
+                        <img src="{% static 'img/Home Page/STEMpedia.jpeg' %}" alt="">
+                    </div>
+                    <p>Timeline: October 2022 - December 2022</p>
+                    <div class="my-4"><button class="btn btn-dark">Watch Video</button></div>
+                    <div class="d-flex justify-content-around p-4 project-statistics mb-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{% static 'img/Home Page/STEM Activities.png' %}" alt="">
+                            <h5>5+</h5>
+                            <h5>Country</h5>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{% static 'img/Home Page/21st Century Skill Programs .png' %}" alt="">
+                            <h5>5+</h5>
+                            <h5>Educators</h5>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="{% static 'img/Home Page/Skill Development .png' %}" alt="">
+                            <h5>5+</h5>
+                            <h5>Students</h5>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Action</h3>
+                        <p>With an aim to uplift the Women hold i.e currently 26% of tech-related roles in the global workforce, according to Gartner Research, AWS Girls’ Tech Day was initiated to educate, inspire, and empower girls and young women aged 8 to 24 to pursue careers in technology. It enabled future female builders to Think Big and ignite their imaginations through STEM. Igniting the vision of Learning by Doing, STEMpedia crafted a customized AWS theme project that opened doors for volunteers attending sessions to provide support at all 4 centres in USA, India, Indonesia and UK.</p>
+                    </div>
+                    <div>
+                        <h3>Impact</h3>
+                        <p>With an aim to uplift the Women hold i.e currently 26% of tech-related roles in the global workforce, according to Gartner Research, AWS Girls’ Tech Day was initiated to educate, inspire, and empower girls and young women aged 8 to 24 to pursue careers in technology. It enabled future female builders to Think Big and ignite their imaginations through STEM. Igniting the vision of Learning by Doing, STEMpedia crafted a customized AWS theme project that opened doors for volunteers attending sessions to provide support at all 4 centres in USA, India, Indonesia and UK.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="upcoming_projects" class="my-5">
+        <div class="container">
+            <div class="upcoming_project_heading">
+                <p class="text-center" style="font-size: 60px;">Our<span style="color: #F58420;"> Upcoming  </span>Projects:</p>
+                <p class="text-center text-muted" style="font-size: 30px;">Unveiling New Projects for Boundless Growth and Learning!</p>
+            </div>
+            <div class="upcoming_project_cards my-5">
+                <div class="d-flex">
+                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past programs/TL_image_1.jpg' %}" alt="">
+                    <div class="ml-5 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Revival of 100+ Tinkering Labs in Assam & Northeast</h3>
+                        <p>The upcoming project aims to revive the existing Tinkering Labs in Assam and the Northeast region. These labs will be equipped with advanced tools, equipment, and resources to promote innovation and practical learning among students. The project will focus on enhancing the infrastructure, training teachers, and providing necessary support to ensure the effective functioning of the Tinkering Labs.</p>
+                    </div>
+                </div>
+                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+                <div class="d-flex">
+                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past programs/TL_image_2.jpg' %}" alt="">
+                    <div class="ml-5 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Skill Training & Job Placement of 200+ Candidates</h3>
+                        <p>This project focuses on providing skill training and job placement opportunities to over 200 candidates. The training programs will be designed to develop relevant skills in line with industry requirements, empowering individuals with employable skills. The project will also facilitate job placement assistance and linkages with potential employers, increasing the employment prospects of the trained candidates.</p>
+                    </div>
+                </div>
+                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+                <div class="d-flex">
+                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past programs/AI_image_2.JPG' %}" alt="">
+                    <div class="ml-5 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Innovation Lab Setup, Pilot Setup in KV Schools</h3>
+                        <p>Innovation Labs will be set up in Kendriya Vidyalaya (KV) schools as part of this project. These labs will serve as dedicated spaces for fostering creativity, problem-solving, and innovation among students. The labs will be equipped with cutting-edge technology and resources to facilitate hands-on learning and experimentation. Additionally, pilot setups will be initiated to test and refine innovative teaching and learning methodologies within the KV school system.</p>
+                    </div>
+                </div>
+                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+                <div class="d-flex">
+                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past programs/TL_image_3.jpg' %}" alt="">
+                    <div class="ml-5 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Setup of Maker Space, Experimental Centre for Student Coaching & Workshops</h3>
+                        <p>The upcoming project aims to establish Maker Spaces and Experimental Centers in educational institutions. These spaces will provide students with opportunities to engage in practical projects, hands-on experiments, and workshops related to various disciplines. The focus will be on promoting creativity, critical thinking, and interdisciplinary learning. The Maker Spaces and Experimental Centers will serve as hubs for student coaching, mentoring, and collaborative problem-solving activities</p>
+                    </div>
+                </div>
+                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="enquiry" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1><span style="color: #F58420;">Enquiry</span> Form</h1>
+                    <h5 class="text-muted mb-4">Interested in conducting an Educational Program? Fill out to learn more!</h5>
+
+                    <form action="" method="post">
+                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
+                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
+                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
+                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
+                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
+                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
+                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
+                        <button class="btn text-white w-100 py-2" style="background-color: #0172D0;">Submit</button>
+                    </form>
+                </div>
+                <div class="col enquiry_image">
+                    <div class="d-flex h-100 align-items-center">
+                        <img class="w-100 img-fluid" src="{% static 'img/Home Page/enquiry.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'includes/footer.html' %}
+{% endblock %}

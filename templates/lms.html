@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} LMS {% endblock %}
+
+{% block extra_css %}
+    <link rel='stylesheet' href="{% static 'css/lms.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <section id="hero">
+        <img class="lms_banner_img img-fluid" src="{% static 'img/lms/banner.jpg' %}" alt="">
+        <div class="overlay">
+            {% include 'includes/navbar1.html' %}
+
+            <div class="lms_banner_content d-flex justify-content-center align-items-center">
+                <div class="container d-flex flex-column ">
+                    <p class="lms_heading">Teach <span style="color: #F58420;">Live</span> & <span style="color: #F58420;">Manage</span> Classroom Seamlessly</p>
+                    <p class="lms_subheading mb-5">with online quiz, homework organizer and more.</p>
+                    <span><button class="btn px-5 text-white px-5 py-2" style="background-color: #F58420; font-size: 20px;">Go to Course <i class="fa-solid fa-arrow-right ml-2"></i></button></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background-color: #f8f8f8;">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-5 p-5 shadow" style="width: 80%; border-top-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <img class="card-img-top" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title">Setup your class</h2>
+                            <p class="card-text text-muted">Create batches, assign topics within your course, schedule classes, enroll and teach unlimited students.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-5 p-5 shadow" style="width: 80%; border-top-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <img class="card-img-top" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title">Free Access</h2>
+                            <p class="card-text text-muted">Create batches, assign topics within your course, schedule classes, enroll and teach unlimited students.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center" style="width: 80%;">
+                        <span style="margin-top: 20px;"><button class="btn px-5 py-3 text-white" style="background-color: #F58420; font-size: 20px;">Start Teaching Live <i class="fa-solid fa-arrow-right ml-2"></i></button></span>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <h1 class="my-5">Go <span style="color: #F58420;">Live</span> with Your Tution <br>Buds in <span style="color: #F58420;">Minutes</span></h1>
+                    <div class="card mb-5 p-5 shadow" style="width: 80%; border-top-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <img class="card-img-top" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title">Start Homework & Communicate</h2>
+                            <p class="card-text text-muted">Create batches, assign topics within your course, schedule classes, enroll and teach unlimited students.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-5 p-5 shadow" style="width: 80%; border-top-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <img class="card-img-top" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title">Lively Interaction</h2>
+                            <p class="card-text  text-muted">Create batches, assign topics within your course, schedule classes, enroll and teach unlimited students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="d-flex flex-column align-items-center mt-5">
+            <h1 class="mb-3"><b>#ReachAllTeachAll</b></h1>
+            <h2>Forever <span style="color: #F58420;">Free</span> for Educators & Trainers</h2>
+        </div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex flex-column align-items-center mx-3">
+                        <img class="lms_card_img" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="p-5 mt-3 d-flex flex-column align-items-center" style="background-color: #FFFCEF;">
+                            <h3 class="card-title text-center" style="color: #3b4351;">Create your Beautiful <br> teacher courseboard</h3>
+                            <p class="card-text text-center">Your online teacher identity with all your live courses listed elegantly with batches & timings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column align-items-center mx-3">
+                        <img class="lms_card_img" src="{% static 'img/lms/img_1.svg' %}" alt="Card image cap">
+                        <div class="p-5 mt-3 d-flex flex-column align-items-center" style="background-color: #FFFCEF;">
+                            <h3 class="card-title text-center" style="color: #3b4351;">Take Live, online <br> 2-way video classes.</h3>
+                            <p class="card-text text-center">Integrated with Zoom, plus homework, chart, learner workspace & many more featuers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5" style="background-color: #f8f8f8;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <h1 style="line-height: 70px;"><b>Bring physical <br>classrooms closer <br>to you</b></h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex shadow my-5 justify-content-center align-items-center p-3 lms_feature_card">
+                        <i class="fa-2x fa-solid fa-circle-check mr-3"></i>
+                        <h5>Live classes with whiteboard</h5>
+                    </div>
+                    <div class="d-flex shadow my-5 justify-content-center align-items-center p-3 ml-auto lms_feature_card">
+                        <i class="fa-2x fa-solid fa-circle-check mr-3"></i>
+                        <h5>Online Assessment & Quiz</h5>
+                    </div>
+                    <div class="d-flex my-5 shadow justify-content-center align-items-center p-3 lms_feature_card">
+                        <i class="fa-2x fa-solid fa-circle-check mr-3"></i>
+                        <h5>Homework Organizer</h5>
+                    </div>
+                    <div class="d-flex my-5 shadow justify-content-center align-items-center p-3 ml-auto lms_feature_card">
+                        <i class="fa-2x fa-solid fa-circle-check mr-3"></i>
+                        <h5>2-way discussion form</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+{% endblock %}

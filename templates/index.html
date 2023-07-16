@@ -1,0 +1,563 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block extra_css %}
+    <link rel='stylesheet' href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="hero">
+        {% include 'includes/navbar1.html' %}
+        <section class="video-container">
+            <video src="{% static 'video/home_banner.mp4' %}" autoplay loop playsinline muted></video>
+            <div class="callout">
+                <div class="text-white" style="width: 70%;">
+                    <div class="main_heading">
+                        <span><p class="d-inline">Unlocking &nbsp;</p></span>
+                        <span style="color: #F58420;" ><p class="d-inline">Future Potential:</p></span>
+                        <p> Empowering&nbsp;the 21st Century Mind</p>
+                    </div>
+
+                    <p class="sub_heading">Explore, Innovate, and excel through our cutting-edge skills, STEM activities, and skills development projects to prepare students for a successful future in a rapidly changing world.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="statistics">
+        <div class="container my-5">
+            <h1 class="text-center mb-5 font-weight-bold">Statistics</h1>
+            <div class="statistic_container d-flex justify-content-between w-100 align-items-center flex-wrap">
+                <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/Home Page/State.png' %}" alt="">
+                    <h5>5+</h5>
+                    <h5>States Covered</h5>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/Home Page/Schools.png' %}" alt="">
+                    <h5>700+</h5>
+                    <h5>Schools</h5>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/Home Page/teacher.png' %}" alt="">
+                    <h5>1300+</h5>
+                    <h5>Teachers Trained</h5>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/Home Page/Student.png' %}" alt="">
+                    <h5>75000+</h5>
+                    <h5>Student Impacted</h5>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/Home Page/employment.png' %}" alt="">
+                    <h5>120+</h5>
+                    <h5>Employment Generated</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="about">
+        <div class="container my-5">
+            <h1 class="text-center mb-5 font-weight-bold mb-4">About LearnHill</h1>
+            <h3 class="text-muted text-center mb-3">Igniting the potential of the next generation through cutting-edge education services tailored to the K12 ecosystem</h3>
+            <p class="text-center">We go beyond traditional classrooms by setting up Innovation Labs, STEM Labs, and Tinkering Labs in schools. These dynamic learning environments encourage hands-on exploration, critical thinking, and problem-solving abilities. Our dedication extends beyond student enrichment. We also offer comprehensive skill training programs that empower students and educators alike to thrive in the digital age. Our commitment to bring meaningful impact extends to facilitating career pathways for our students and teachers. Through strategic partnerships and networking opportunities, we connect individuals with relevant job placements, ensuring that their newfound skills and talents are applied in real-world contexts.</p>
+        </div>
+    </section>
+
+
+    <section class="my-5" id="partners">
+        <h1 class="text-center mb-5 font-weight-bold">Our Partners</h1>
+        <div class="container mt-5 p-4">
+            <div class="d-flex justify-content-around mb-4 flex-wrap align-self-center">
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/SSA meghalaya.png' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/SSA Assam.jpeg' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/STEMpedia.jpeg' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/TRTC Guwahati   .png' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/NIT Silchar .jpg' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/Industrial Training Institute.jpeg' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/IIT Guwahati.jpeg' %}" alt="Card image cap">
+                </div>
+                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                    <img class="card-img-top" src="{% static 'img/Home Page/IIT Guwahati research park.jpeg' %}" alt="Card image cap">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="projects">
+        <h1 class="text-center mb-5 font-weight-bold">Past Projects</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="background-color: white; border: none;">
+                        <i class="fa fa-2x fa-arrow-left text-dark"></i>
+                    </a>
+                </div>
+
+                <div class="col-10">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="container p-4 border shadow rounded" style="background-color: #FFE4B3;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/Home Page/AI coding lab 23.jpg' %}" alt=""></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="d-flex flex-column">
+                                                <h2>Tinkering Lab Assam 2021-23</h2>
+                                                <div class="my-2" style="border: 1px solid black;"></div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Supported By</h6>
+                                                        <p class="mb-0">LearnHill</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Location</h6>
+                                                        <p class="mb-0">Assam</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Student Impacted</h6>
+                                                        <p class="mb-0">1200+</p>
+                                                    </div>
+                                                </div>
+
+                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
+                                                <a href="#">read more ...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container p-4 border shadow rounded" style="background-color: #FFE4B3;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/Home Page/AI coding lab 23.jpg' %}" alt=""></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="d-flex flex-column">
+                                                <h1>Tinkering Lab Assam 2021-23</h1>
+                                                <div class="my-2" style="border: 1px solid black;"></div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Supported By</h6>
+                                                        <p class="mb-0">LearnHill</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Location</h6>
+                                                        <p class="mb-0">Assam</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Student Impacted</h6>
+                                                        <p class="mb-0">1200+</p>
+                                                    </div>
+                                                </div>
+
+                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
+                                                <a href="#">read more ...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container p-4 border shadow rounded" style="background-color: #FFE4B3;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/Home Page/AI coding lab 23.jpg' %}" alt=""></div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="d-flex flex-column">
+                                                <h1>Tinkering Lab Assam 2021-23</h1>
+                                                <div class="my-2" style="border: 1px solid black;"></div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Supported By</h6>
+                                                        <p class="mb-0">LearnHill</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Location</h6>
+                                                        <p class="mb-0">Assam</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <h6>Student Impacted</h6>
+                                                        <p class="mb-0">1200+</p>
+                                                    </div>
+                                                </div>
+
+                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
+                                                <a href="#">read more ...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next" style="background-color: white; border: none;">
+                        <i class="fa fa-2x fa-arrow-right text-dark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5" id="offerings">
+        <h1 class="text-center mb-5 font-weight-bold">Our Offerings</h1>
+
+        <div class="container my-5 p-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+                <div class="card shadow my-3 mx-4">
+                    <div class="d-flex justify-content-center">
+                        <img class="card-img-top img-fluid offering_img" src="{% static 'img/Home Page/21st Century Skill Programs .png' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">21<sup>st</sup> Century Skill Programs</h4>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Tinkering Lab</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px;">
+                                <h6>AI Lab</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>STEM Lab</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>3D Design and Printing</h5>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Electronics and Coding</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow my-3 mx-4">
+                    <div class="d-flex justify-content-center">
+                        <img class="card-img-top img-fluid offering_img p-4" src="{% static 'img/Home Page/STEM Activities.png' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title mb-4 text-center">STEM Activities</h4>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Science / Maths Club</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Science Congress</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>STEM Kits</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>State / National Quiz</h5>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>State / National Olympiad</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow my-3 mx-4">
+                    <div class="d-flex justify-content-center">
+                        <img class="card-img-top img-fluid offering_img" src="{% static 'img/Home Page/Skill Development .png' %}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Skill Development Programs</h4>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>21<sup>st</sup> Century Skill Training</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Coding, Robotics, AI, Automation</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Entreprenuerial Mindset</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Employability Skills Training</h5>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-3" src="{% static 'img/Home Page/check_img.png' %}" alt="" style="width: 36px; ">
+                                <h6>Job Placement</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 p-5" id="expertise" style="background-color: #FFC04D;">
+        <h1 class="text-center mb-5 font-weight-bold">Our Expertise</h1>
+
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-around align-self-center">
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/AI coding lab 23.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-2">
+                        <h5 class="text-center mb-0">Artificial Intelligence</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/coding.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-2">
+                        <h5 class="text-center mb-0">Coding</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/ml.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Machine Learning</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/iot.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Internet of Things</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/Design Thinking.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Design Thinking</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/presentation.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Presentation</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/experimentation.jpeg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Experimentation</h5>
+                    </div>
+                </div>
+                <div class="card shadow px-3 pt-3 mb-5">
+                    <img class="card_image card-img-top img-fluid" src="{% static 'img/Home Page/robotics.jpg' %}" style="border-radius: 20px;" alt="Card image cap">
+                    <div class="card-body p-3">
+                        <h5 class="text-center mb-0">Robotics</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="my-5" id="impact">
+        <h1 class="text-center mb-5 font-weight-bold">Our Impact Programs</h1>
+        <div class="container w-50 m-auto">
+            <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
+                <img class="img-fluid impact_img mr-5" src="{% static 'img/Home Page/Lab Revival.png' %}" alt="">
+                <div class="d-flex flex-column">
+                    <h3>Lab Revival</h3>
+                    <p>The Purpose of the Lab Revival Program is to bring new life to school laboratories by revitalizing and mordernizing them.</p>
+                    <span>
+                        <button class="btn text-white" style="background-color: #2c66b8;">Explore More</button>
+                    </span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-5 impact_container impact_img_2_container">
+                <div class="d-flex flex-column">
+                    <h3>Free Upskilling</h3>
+                    <p>Free Upskilling Program addresses education and skill gaps by providing individuals with inclusive and modern learning opportunities.</p>
+                    <span>
+                        <button class="btn text-white" style="background-color: #2c66b8;">Explore More</button>
+                    </span>
+                </div>
+                <img class="img-fluid impact_img ml-5" src="{% static 'img/Home Page/free upskilling.png' %}" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
+                <img class="img-fluid impact_img mr-5" src="{% static 'img/Home Page/student literacy.png' %}" alt="">
+                <div class="d-flex flex-column">
+                    <h3>Student Literacy</h3>
+                    <p>Student Literacy is Foundational Skill that empowers individuals, fosters critical thinking, and supports academic and personal Growth</p>
+                    <span>
+                        <button class="btn text-white" style="background-color: #2c66b8;">Explore More</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonials" style="margin: 10rem 0;">
+        <h1 class="text-center mb-5">Feedback & Testimonials</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev" style="background-color: white; border: none;">
+                        <i class="fa fa-2x fa-arrow-left text-dark"></i>
+                    </a>
+                </div>
+
+                <div class="col-10">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row m-auto">
+                                    <div class="d-flex">
+                                        <div class="col d-flex flex-column justify-content-center align-items-center p-4 border">
+                                            <div class="d-flex w-100 justify-content-center mb-4 testimonial_avatar">
+                                                <img class="rounded-circle shadow-1-strong testimonial_img" src="{% static 'img/Home Page/enquiry.png' %}" alt="avatar" />
+                                                <div class="">
+                                                    <p class="mb-0 designer_name">Vaibhav Paliwal</p>
+                                                    <p class="text-muted designer_designation">Lead Designer</p>
+                                                    <ul class="list-unstyled d-flex text-warning mb-0">
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="mb-3 testimonial_heading"><strong>It was a very good Experience</strong></p>
+                                            <p class="text-muted text-center testimonial_message">
+                                                <i class="fas fa-quote-left"></i>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row m-auto"">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="col d-flex flex-column justify-content-center align-items-center p-4 border">
+                                            <div class="d-flex w-100 justify-content-center mb-4 testimonial_avatar">
+                                                <img class="rounded-circle shadow-1-strong testimonial_img" src="{% static 'img/Home Page/enquiry.png' %}" alt="avatar" />
+                                                <div class="">
+                                                    <h3 class="mb-0 designer_name">Ketul Madhwani</h3>
+                                                    <h5 class="text-muted designer_designation">UI Designer</h5>
+                                                    <ul class="list-unstyled d-flex text-warning mb-0">
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="mb-3 testimonial_heading"><strong>It was a very good Experience</strong></p>
+                                            <p class="text-muted text-center testimonial_message">
+                                                <i class="fas fa-quote-left"></i>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row m-auto">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="col d-flex flex-column justify-content-center align-items-center p-4 border">
+                                            <div class="d-flex w-100 justify-content-center align-items-center mb-4 testimonial_avatar">
+                                                <img class="rounded-circle shadow-1-strong testimonial_img" src="{% static 'img/Home Page/enquiry.png' %}" alt="avatar" />
+                                                <div class="">
+                                                    <h3 class="mb-0 designer_name">Dev Sanger</h3>
+                                                    <h5 class="text-muted designer_designation">UX Designer</h5>
+                                                    <ul class="list-unstyled d-flex text-warning mb-0">
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                        <li><i class="fas fa-star fa-sm"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="mb-3 testimonial_heading"><strong>It was a very good Experience</strong></p>
+                                            <p class="text-muted text-center testimonial_message">
+                                                <i class="fas fa-quote-left"></i>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next" style="background-color: white; border: none;">
+                        <i class="fa fa-2x fa-arrow-right text-dark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="enquiry" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1><span style="color: #F58420;">Enquiry</span> Form</h1>
+                    <h5 class="text-muted mb-4">Interested in conducting an Educational Program? Fill out to learn more!</h5>
+
+                    <form action="" method="post">
+                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
+                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
+                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
+                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
+                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
+                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
+                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
+                        <button class="btn text-white w-100 py-2" style="background-color: #0172D0;">Submit</button>
+                    </form>
+                </div>
+                <div class="col enquiry_image">
+                    <div class="d-flex h-100 align-items-center">
+                        <img class="w-100 img-fluid" src="{% static 'img/Home Page/enquiry.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+{% endblock %}

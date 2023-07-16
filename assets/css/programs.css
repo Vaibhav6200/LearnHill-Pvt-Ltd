@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: 'metropolis-black', sans-serif;
+  }
+
+
+#hero .program_banner_img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#hero .navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .overlay{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+#hero .program_banner_content{
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+#hero .program_banner_content .program_heading{
+  @media(max-width: 360px){
+    font-size: 25px;
+  }
+  @media(min-width: 360px){
+    font-size: 30px;
+  }
+  @media(min-width: 576px){
+    font-size: 40px;
+  }
+  @media(min-width: 992px){
+    font-size: 50px;
+  }
+  @media(min-width: 1200px){
+    font-size: 60px;
+  }
+}
+
+#hero .program_banner_content .program_subheading{
+  @media(min-width: 360px){
+    font-size: 18px;
+  }
+  @media(min-width: 576px){
+    font-size: 20px;
+  }
+  @media(min-width: 992px){
+    font-size: 25px;
+  }
+  @media(min-width: 1200px){
+    font-size: 30px;
+  }
+}
+
+
+
+#enquiry .enquiry_image{
+  @media(max-width: 800px){
+    display: none;
+  }
+}
+
+.program_img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.services_img:hover{
+  cursor: pointer;
+}
+

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: 'metropolis-black', sans-serif;
+}
+
+
+#hero .community_banner_video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#hero .navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#hero .community_banner_content{
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+
+#hero .community_heading{
+    @media(min-width: 360px){
+        font-size: 30px;
+    }
+    @media(min-width: 576px){
+        font-size: 40px;
+    }
+    @media(min-width: 992px){
+        font-size: 50px;
+    }
+    @media(min-width: 1200px){
+        font-size: 60px;
+    }
+}
+
+#hero .community_subheading{
+    @media(min-width: 360px){
+        font-size: 12px;
+    }
+    @media(min-width: 576px){
+        font-size: 15px;
+    }
+    @media(min-width: 992px){
+        font-size: 20px;
+    }
+    @media(min-width: 1200px){
+        font-size: 26px;
+    }
+}
+
+
+.community_card_container{
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+}
+
+
+.community_img{
+    object-fit: cover;
+    border-radius: 10px;
+    @media (max-width: 576px) {
+        width: 250px;
+        height: 150px;
+        margin: 0 !important;
+    }
+    @media (min-width: 576px) {
+        width: 300px;
+        height: 200px;
+    }
+    @media (min-width: 992px) {
+        width: 350px;
+        height: 250px;
+    }
+    @media (min-width: 1200px) {
+        width: 400px;
+        height: 300px;
+    }
+}
+#community_projects .community_heading{
+    color: #F58420;
+    @media (max-width: 576px) {
+        margin-top: 10px;
+    }
+    @media (min-width: 576px) {
+        font-size: 20px;
+    }
+    @media (min-width: 992px) {
+        font-size: 24px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 30px;
+    }
+}
+.community_description{
+    font-size: 18px;
+    @media (max-width: 576px) {
+        font-size: 10px;
+    }
+    @media (min-width: 576px) {
+        font-size: 12px;
+    }
+    @media (min-width: 992px) {
+        font-size: 15px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
+}
+
+.community_card_2{
+    @media(max-width: 576px){
+        flex-direction: column-reverse;
+    }
+}
+
+
+#enquiry .enquiry_image{
+    @media(max-width: 800px){
+      display: none;
+    }
+}

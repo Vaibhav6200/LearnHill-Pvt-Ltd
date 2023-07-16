@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} LMS {% endblock %}
+
+{% block extra_css %}
+    <link rel='stylesheet' href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+    {% include 'includes/navbar2.html' %}
+
+    <!-- <section id="contact">
+        <img class="contact_img" src="assets/img/contact.png" alt="">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="contact_heading text-white">Interested in conducting an <span style="color: #F58420;">educational program?</span> Fill out the form to learn more!</p>
+                        <p class="contact_subheading text-white mb-5">Our team is committed to providing exceptional service, and we are here to assist you every step of the way. If you have any questions or concerns feel free to reach us at operations@learnhill.in. Get in touch with us.</p>
+                    </div>
+                    <div class="col-md-6">
+
+                        <h1 class="">Get in <span style="color: #F58420;">touch</span> </h1>
+
+                        <form action="" method="post">
+                            <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
+                            <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
+                            <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
+                            <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
+                            <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
+                            <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
+                            <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
+                            <button class="btn text-white w-100 py-2" style="background-color: #0172D0;">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+
+    <section id="contact" class="my-5">
+        <!-- <img class="contact_img" src="assets/img/contact.png" alt=""> -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="contact_heading">Interested in conducting an <span style="color: #F58420;">educational program?</span> Fill out the form to learn more!</p>
+                    <p class="contact_subheading mb-5">Our team is committed to providing exceptional service, and we are here to assist you every step of the way. If you have any questions or concerns feel free to reach us at operations@learnhill.in. Get in touch with us.</p>
+                    <div class="d-flex justify-content-around my-5">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-2x fa-solid fa-phone mr-2"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0">Phone</p>
+                                <small>+91 00000 00000</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-envelope fa-2x mr-2"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0">E-Mail</p>
+                                <small>operations@learnhill.in</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-location-dot fa-2x mr-2"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0">Address</p>
+                                <small>G102, Gandhi Road Delhi</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="">Get in <span style="color: #F58420;">touch</span> </h1>
+                    <form action="" method="post">
+                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
+                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
+                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
+                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
+                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
+                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
+                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
+                        <button class="btn text-white w-100 py-2" style="background-color: #0172D0;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.7374865717215!2d77.17184468030227!3d28.577644613025303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d7424415857%3A0x4adc51675d2d7c47!2sMahatma%20Gandhi%20Rd%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1689311533628!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    {% include 'includes/footer.html' %}
+
+{% endblock %}

@@ -9,8 +9,13 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'logo', 'created_at', 'updated_at']
 
 class ProgramAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in program._meta.get_fields()]
+    list_display = ['id', 'heading', 'start_date', 'end_date', 'location', 'students_impacted', 'educators', 'past', 'upcoming']
+    list_display_links = ['id', 'heading']
 
-admin.site.register(statistic, StatisticAdmin)
-admin.site.register(partner, PartnerAdmin)
-admin.site.register(program, ProgramAdmin)
+
+admin.site.register(Statistic, StatisticAdmin)
+admin.site.register(Partner, PartnerAdmin)
+admin.site.register(Program, ProgramAdmin)
+admin.site.register(Category)
+admin.site.register(Blog)
+admin.site.register(Profile)

@@ -27,53 +27,63 @@
 
     <section id="past_program_cards">
         <h1 class="text-center my-5" style="font-size: 60px;"><span style="color: #F58420;">Past</span> Projects</h1>
+
+        {% for program in past_programs %}
         <div class="container border  my-5 p-5 rounded">
             <div class="row">
                 <div class="col-md-6 project-images">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/home/AI coding lab 23.jpg' %}" alt="">
-                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/home/Quiz Competition.jpg' %}" alt="">
-                        <img class="img-fluid mb-3 past_program_img" src="{% static 'img/home/Club formation.jpg' %}" alt="">
+                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image1.url }}" alt="">
+                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image2.url }}" alt="">
+                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image3.url }}" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Fighting Gender Gap Among Future Creators with AI</h2>
-                    <p>Partnership with AWS Girl's Tech Day and Cloudroom US, Australia, Indonesia, India and UK</p>
+                    <h2>{{ program.heading }}</h2>
+                    <p>{{ program.subheading }}</p>
 
-                    <div class="partner-logo">
-                        <img src="{% static 'img/home/partner_3.jpg' %}" alt="">
-                        <img src="{% static 'img/home/partner_8.jpg' %}" alt="">
+                    <div class="partner-logo my-4">
+                        {% for partner in program.partner.all %}
+                            <img src="{{ partner.logo.url }}" alt="">
+                        {% endfor %}
                     </div>
-                    <p>Timeline: October 2022 - December 2022</p>
+                    <p>Timeline: {{ program.start_date }} - {{ program.end_date }}</p>
                     <div class="my-4"><button class="btn btn-dark">Watch Video</button></div>
                     <div class="d-flex justify-content-around p-4 project-statistics mb-3">
                         <div class="d-flex flex-column align-items-center">
                             <img src="{% static 'img/home/offering_1.png' %}" alt="">
-                            <h5>5+</h5>
+                            <h5>{{ program.country_reached }}+</h5>
                             <h5>Country</h5>
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <img src="{% static 'img/home/offering_2.png' %}" alt="">
-                            <h5>5+</h5>
+                            <h5>{{ program.educators }}+</h5>
                             <h5>Educators</h5>
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <img src="{% static 'img/home/offering_3.png' %}" alt="">
-                            <h5>5+</h5>
+                            <h5>{{ program.students_impacted }}+</h5>
                             <h5>Students</h5>
                         </div>
                     </div>
                     <div>
                         <h3>Action</h3>
-                        <p>With an aim to uplift the Women hold i.e currently 26% of tech-related roles in the global workforce, according to Gartner Research, AWS Girls’ Tech Day was initiated to educate, inspire, and empower girls and young women aged 8 to 24 to pursue careers in technology. It enabled future female builders to Think Big and ignite their imaginations through STEM. Igniting the vision of Learning by Doing, STEMpedia crafted a customized AWS theme project that opened doors for volunteers attending sessions to provide support at all 4 centres in USA, India, Indonesia and UK.</p>
+                        <p> {{ program.action }} </p>
                     </div>
                     <div>
                         <h3>Impact</h3>
-                        <p>With an aim to uplift the Women hold i.e currently 26% of tech-related roles in the global workforce, according to Gartner Research, AWS Girls’ Tech Day was initiated to educate, inspire, and empower girls and young women aged 8 to 24 to pursue careers in technology. It enabled future female builders to Think Big and ignite their imaginations through STEM. Igniting the vision of Learning by Doing, STEMpedia crafted a customized AWS theme project that opened doors for volunteers attending sessions to provide support at all 4 centres in USA, India, Indonesia and UK.</p>
+                        <p> {{ program.impact }} </p>
                     </div>
                 </div>
             </div>
         </div>
+        {% empty %}
+        <div class="container">
+            <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+            <h2 class="text-muted">No Past Programs !!!</h2>
+            <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+        </div>
+        {% endfor %}
     </section>
 
 
@@ -84,38 +94,20 @@
                 <p class="text-center text-muted" style="font-size: 30px;">Unveiling New Projects for Boundless Growth and Learning!</p>
             </div>
             <div class="upcoming_project_cards my-5">
+                {% for program in upcoming_programs %}
                 <div class="d-flex">
-                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past_programs/TL_image_1.jpg' %}" alt="">
+                    <img class="img-fluid upcoming_project_img" src="{{program.image1.url}}" alt="">
                     <div class="ml-5 d-flex flex-column justify-content-center">
-                        <h3 class="mb-4">Revival of 100+ Tinkering Labs in Assam & Northeast</h3>
+                        <h3 class="mb-4">{{ program.heading }}</h3>
                         <p>The upcoming project aims to revive the existing Tinkering Labs in Assam and the Northeast region. These labs will be equipped with advanced tools, equipment, and resources to promote innovation and practical learning among students. The project will focus on enhancing the infrastructure, training teachers, and providing necessary support to ensure the effective functioning of the Tinkering Labs.</p>
                     </div>
                 </div>
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
-                <div class="d-flex">
-                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past_programs/TL_image_2.jpg' %}" alt="">
-                    <div class="ml-5 d-flex flex-column justify-content-center">
-                        <h3 class="mb-4">Skill Training & Job Placement of 200+ Candidates</h3>
-                        <p>This project focuses on providing skill training and job placement opportunities to over 200 candidates. The training programs will be designed to develop relevant skills in line with industry requirements, empowering individuals with employable skills. The project will also facilitate job placement assistance and linkages with potential employers, increasing the employment prospects of the trained candidates.</p>
-                    </div>
-                </div>
+                {% empty %}
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
-                <div class="d-flex">
-                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past_programs/AI_image_2.JPG' %}" alt="">
-                    <div class="ml-5 d-flex flex-column justify-content-center">
-                        <h3 class="mb-4">Innovation Lab Setup, Pilot Setup in KV Schools</h3>
-                        <p>Innovation Labs will be set up in Kendriya Vidyalaya (KV) schools as part of this project. These labs will serve as dedicated spaces for fostering creativity, problem-solving, and innovation among students. The labs will be equipped with cutting-edge technology and resources to facilitate hands-on learning and experimentation. Additionally, pilot setups will be initiated to test and refine innovative teaching and learning methodologies within the KV school system.</p>
-                    </div>
-                </div>
+                <h2 class="text-muted">No Upcoming Programs !!!</h2>
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
-                <div class="d-flex">
-                    <img class="img-fluid upcoming_project_img" src="{% static 'img/past_programs/TL_image_3.jpg' %}" alt="">
-                    <div class="ml-5 d-flex flex-column justify-content-center">
-                        <h3 class="mb-4">Setup of Maker Space, Experimental Centre for Student Coaching & Workshops</h3>
-                        <p>The upcoming project aims to establish Maker Spaces and Experimental Centers in educational institutions. These spaces will provide students with opportunities to engage in practical projects, hands-on experiments, and workshops related to various disciplines. The focus will be on promoting creativity, critical thinking, and interdisciplinary learning. The Maker Spaces and Experimental Centers will serve as hubs for student coaching, mentoring, and collaborative problem-solving activities</p>
-                    </div>
-                </div>
-                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+                {% endfor %}
 
             </div>
         </div>

@@ -12,36 +12,43 @@
 
     <section id="blog-content">
         <div class="container p-5">
-            <span class="px-3 py-2" style="border-radius: 10px; background-color: #4968F3;"><small class="text-white font-weight-bold">Technology</small></span>
-            <h1 class="my-3">The Impact of Technology on workplace: How Technology is changing</h1>
+            {% for cat in blog_details.category.all %}
+            <span class="px-3 py-2" style="border-radius: 10px; background-color: #4968F3;"><small class="text-white font-weight-bold">{{cat.name}}</small></span>
+            {% endfor %}
+
+            <h1 class="my-3">{{ blog_details.title }}</h1>
+
             <div class="d-flex align-items-center">
                 <div class="mr-5">
-                    <img src="{% static 'img/placeholder.jpg' %}" alt="" style="width: 36px; height: 36px; border-radius: 50%;">
-                    <small class="ml-2">Vaibhav Paliwal</small>
+                    <img src="{{ blog_details.author.image.url }}" alt="" style="width: 36px; height: 36px; border-radius: 50%;">
+                    <small class="ml-2">{{ blog_details.author.user.username }}</small>
                 </div>
-                <small class="mb-0">August 20, 2022</small>
+                <small class="mb-0">{{ blog_details.updated_at }}</small>
             </div>
 
-            <img class="w-100 my-5" src="{% static 'img/blog/Blog Image 2.jpg' %}" alt="" style="border-radius: 40px;">
+            <div class="my-5" id="blog_body">
+                {{ blog_details.body|safe }}
+            </div>
+
 
             <div id="googl_adds"></div>
-
-            <p>Traveling is an enriching experience that opens up new horizons, exposes us to different cultures, and creates memories that last a lifetime. However, traveling can also be stressful and overwhelming, especially if you don't plan and prepare adequately. In this blog article, we'll explore tips and tricks for a memorable journey and how to make the most of your travels.</p>
-            <p class="mb-5">One of the most rewarding aspects of traveling is immersing yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in making connections and showing respect.</p>
-
-
-            <h2 class="font-weight-bold mb-3">Research Your Destination</h2>
-            <p>Before embarking on your journey, take the time to research your destination. This includes understanding the local culture, customs, and laws, as well as identifying top attractions, restaurants, and accommodations. Doing so will help you navigate your destination with confidence and avoid any cultural faux pas.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Viverra adipiscing at in tellus.</p>
 
 
             <div class="d-flex flex-column justify-content-center align-items-center my-5">
                 <h2>Share this with your Friends</h2>
                 <div>
-                    <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/Facebook Icon.jpg' %}" alt="facebook img">
-                    <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/Twitter Icon.jpg' %}" alt="twitter img">
-                    <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/reddit.jpg' %}" alt="reddit img">
-                    <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/WhatsApp Icon.jpg' %}" alt="whatsapp img">
+                    <a href="https://www.facebook.com/sharer.php?u={{ request.build_absolute_uri }}">
+                        <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/Facebook Icon.jpg' %}" alt="facebook img">
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ post.title }}" target="_blank">
+                        <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/Twitter Icon.jpg' %}" alt="twitter img">
+                    </a>
+                    <a href="https://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ post.title }}" target="_blank">
+                        <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/reddit.jpg' %}" alt="reddit img">
+                    </a>
+                    <a href="whatsapp://send?text={{ post.title }} - {{ request.build_absolute_uri }}" data-action="share/whatsapp/share" target="_blank">
+                        <img style="width: 36px;" class="mx-3" src="{% static 'img/blog/WhatsApp Icon.jpg' %}" alt="whatsapp img">
+                    </a>
                 </div>
             </div>
 
@@ -50,48 +57,27 @@
             <div class="recommendation my-5">
                 <h2 class="mb-3">You may also Like: </h2>
                 <div class="d-flex justify-content-between mb-4 flex-wrap">
-                    <div class="card mb-5" style="width: 20rem;">
-                        <img class="card-img-top" src="{% static 'img/blog/Blog Image 1.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <small class="text-primary">Technology</small>
-                            <h5 class="card-title"><strong>The Impact of Technology on the Workplace: How Technology is Changing</strong></h5>
+                    {% for blog in related_blogs %}
+                    <div class="card mb-5 shadow" style="width: 20rem; border-radius: 8px;">
+                        <img class="card-img-top" src="{{ blog.card_image.url }}" style="border-radius: 8px;" alt="Card image cap">
+                        <div class="card-body h-100">
+                            <div class="mb-4">
+                                {% for c in blog.category.all %}
+                                <small class="text-primary">#{{ c.name }} </small>
+                                {% endfor %}
+                            </div>
+                            <h5 class="card-title"><strong><a class="text-dark" href="{% url 'LearnHillApp:blog_details' blog.id %}">{{ blog.title|truncatewords:10 }}</a></strong></h5>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <img src="{% static 'img/placeholder.jpg' %}" alt="" style="width: 36px; height: 36px; border-radius: 50%;">
-                                    <small class="ml-2">Vaibhav Paliwal</small>
+                                    <img src="{{ blog.author.image.url }}" alt="" class="border" style="width: 36px; height: 36px; border-radius: 50%;">
+                                    <small class="ml-2">{{ blog.author.username }}</small>
                                 </div>
-                                <small class="mb-0">August 20, 2022</small>
+                                <small class="mb-0">{{ blog.updated_at }}</small>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-5" style="width: 20rem;">
-                        <img class="card-img-top" src="{% static 'img/blog/Blog Image 1.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <small class="text-primary">Technology</small>
-                            <h5 class="card-title"><strong>The Impact of Technology on the Workplace: How Technology is Changing</strong></h5>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <img src="{% static 'img/placeholder.jpg' %}" alt="" style="width: 36px; height: 36px; border-radius: 50%;">
-                                    <small class="ml-2">Vaibhav Paliwal</small>
-                                </div>
-                                <small class="mb-0">August 20, 2022</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-5" style="width: 20rem;">
-                        <img class="card-img-top" src="{% static 'img/blog/Blog Image 1.jpg' %}" alt="Card image cap">
-                        <div class="card-body">
-                            <small class="text-primary">Technology</small>
-                            <h5 class="card-title"><strong>The Impact of Technology on the Workplace: How Technology is Changing</strong></h5>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <img src="{% static 'img/placeholder.jpg' %}" alt="" style="width: 36px; height: 36px; border-radius: 50%;">
-                                    <small class="ml-2">Vaibhav Paliwal</small>
-                                </div>
-                                <small class="mb-0">August 20, 2022</small>
-                            </div>
-                        </div>
-                    </div>
+
+                    {% endfor %}
                 </div>
             </div>
         </div>

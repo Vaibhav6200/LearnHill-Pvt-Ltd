@@ -33,27 +33,27 @@
             <div class="statistic_container d-flex justify-content-between w-100 align-items-center flex-wrap">
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                     <img class="mb-2" style="width: 80px;" src="{% static 'img/home/State.jpg' %}" alt="">
-                    <h5>5+</h5>
+                    <h5>{{ statistics.states_covered }}+</h5>
                     <h5>States Covered</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                     <img class="mb-2" style="width: 80px;" src="{% static 'img/home/Schools.jpg' %}" alt="">
-                    <h5>700+</h5>
+                    <h5>{{ statistics.schools }}+</h5>
                     <h5>Schools</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                     <img class="mb-2" style="width: 80px;" src="{% static 'img/home/teacher.jpg' %}" alt="">
-                    <h5>1300+</h5>
+                    <h5>{{ statistics.teachers_trained }}+</h5>
                     <h5>Teachers Trained</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                     <img class="mb-2" style="width: 80px;" src="{% static 'img/home/Student.jpg' %}" alt="">
-                    <h5>75000+</h5>
+                    <h5>{{ statistics.students_impacted }}+</h5>
                     <h5>Student Impacted</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                     <img class="mb-2" style="width: 80px;" src="{% static 'img/home/employment.jpg' %}" alt="">
-                    <h5>120+</h5>
+                    <h5>{{ statistics.employment_generated }}+</h5>
                     <h5>Employment Generated</h5>
                 </div>
             </div>
@@ -73,30 +73,13 @@
         <h1 class="text-center mb-5 font-weight-bold">Our Partners</h1>
         <div class="container mt-5 p-4">
             <div class="d-flex justify-content-around mb-4 flex-wrap align-self-center">
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_1.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_2.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_3.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_4.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_5.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_6.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_7.jpg' %}" alt="Card image cap">
-                </div>
-                <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
-                    <img class="card-img-top" src="{% static 'img/home/partner_8.jpg' %}" alt="Card image cap">
-                </div>
+
+                {% for partner in partners %}
+                    <div class="card shadow d-flex justify-content-center align-items-center mb-3" style="width: 15rem;">
+                        <img class="card-img-top" src="{{ partner.logo.url }}" alt="Card image cap">
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
@@ -116,104 +99,46 @@
                     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
 
-                            <div class="carousel-item active">
-                                <div class="container p-4 border shadow rounded" style="background-color: #FCF7DE;">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/home/AI coding lab 23.jpg' %}" alt=""></div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="d-flex flex-column">
-                                                <h2>Tinkering Lab Assam 2021-23</h2>
-                                                <div class="my-2" style="border: 1px solid black;"></div>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Supported By</h6>
-                                                        <p class="mb-0">LearnHill</p>
+                            {% for program in past_programs %}
+                                {% if forloop.counter == 1 %}
+                                <div class="carousel-item active">
+                                {% else %}
+                                <div class="carousel-item">
+                                {% endif %}
+                                    <div class="container p-4" style="background-color: #FCF7DE;">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{{ program.image1.url }}" alt=""></div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="d-flex flex-column">
+                                                    <h2>{{program.heading}}</h2>
+                                                    <div class="my-2" style="border: 1px solid black;"></div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="d-flex flex-column">
+                                                            <h6>Supported By</h6>
+                                                            {% for partner in program.partner.all %}
+                                                            <small class="mb-0">{{ partner.name }}</small>
+                                                            {% endfor %}
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6>Location</h6>
+                                                            <small class="mb-0">{{program.location}}</small>
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6>Student Impacted</h6>
+                                                            <small class="mb-0">{{program.students_impacted}}+</small>
+                                                        </div>
                                                     </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Location</h6>
-                                                        <p class="mb-0">Assam</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Student Impacted</h6>
-                                                        <p class="mb-0">1200+</p>
-                                                    </div>
-                                                </div>
 
-                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
-                                                <a href="#">read more ...</a>
+                                                    <h5 class="mt-3">{{ program.action|truncatewords:20 }}</h5>
+                                                    <a class="text-dark" href="{% url 'LearnHillApp:past_programs' %}">read more ...</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="carousel-item">
-                                <div class="container p-4 border shadow rounded" style="background-color: #FFE4B3;">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/home/AI coding lab 23.jpg' %}" alt=""></div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="d-flex flex-column">
-                                                <h1>Tinkering Lab Assam 2021-23</h1>
-                                                <div class="my-2" style="border: 1px solid black;"></div>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Supported By</h6>
-                                                        <p class="mb-0">LearnHill</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Location</h6>
-                                                        <p class="mb-0">Assam</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Student Impacted</h6>
-                                                        <p class="mb-0">1200+</p>
-                                                    </div>
-                                                </div>
-
-                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
-                                                <a href="#">read more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="carousel-item">
-                                <div class="container p-4 border shadow rounded" style="background-color: #FFE4B3;">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded" src="{% static 'img/home/AI coding lab 23.jpg' %}" alt=""></div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="d-flex flex-column">
-                                                <h1>Tinkering Lab Assam 2021-23</h1>
-                                                <div class="my-2" style="border: 1px solid black;"></div>
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Supported By</h6>
-                                                        <p class="mb-0">LearnHill</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Location</h6>
-                                                        <p class="mb-0">Assam</p>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <h6>Student Impacted</h6>
-                                                        <p class="mb-0">1200+</p>
-                                                    </div>
-                                                </div>
-
-                                                <h5 class="mt-3">Tinkering lab is a creative and hands-on learning space where individuals can explore, experiment and invent using wide range of tooks, materials and techonologies</h5>
-                                                <a href="#">read more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -239,23 +164,23 @@
                         <h4 class="card-title text-center mb-4">21<sup>st</sup> Century Skill Programs</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Tinkering Lab</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px;">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>AI Lab</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>STEM Lab</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>3D Design and Printing</h5>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Electronics and Coding</h6>
                             </div>
                         </div>
@@ -266,26 +191,26 @@
                         <img class="card-img-top img-fluid offering_img p-4" src="{% static 'img/home/offering_2.png' %}" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title mb-4 text-center">STEM Activities</h4>
+                        <h4 class="card-title mb-5 text-center">STEM Activities</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Science / Maths Club</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Science Congress</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>STEM Kits</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>State / National Quiz</h5>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>State / National Olympiad</h6>
                             </div>
                         </div>
@@ -299,23 +224,23 @@
                         <h4 class="card-title text-center">Skill Development Programs</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>21<sup>st</sup> Century Skill Training</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Coding, Robotics, AI, Automation</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Entreprenuerial Mindset</h6>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Employability Skills Training</h5>
                             </div>
                             <div class="d-flex align-items-center">
-                                <img class="mr-3" src="{% static 'img/home/check_img.jpg' %}" alt="" style="width: 36px; ">
+                                <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
                                 <h6>Job Placement</h6>
                             </div>
                         </div>
@@ -385,7 +310,7 @@
 
     <section class="my-5" id="impact">
         <h1 class="text-center mb-5 font-weight-bold">Our Impact Programs</h1>
-        <div class="container w-50 m-auto">
+        <div class="container m-auto">
             <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
                 <img class="img-fluid impact_img mr-5" src="{% static 'img/home/impact_1.jpg' %}" alt="">
                 <div class="d-flex flex-column">

@@ -62,3 +62,13 @@
         font-size: 22px;
     }
 }
+
+.contact_mobile_view{
+    @media(max-width: 576px){
+        flex-direction: column;
+        .contact_phone, .contact_email{
+            margin-bottom: 20px;
+        }
+
+    }
+}

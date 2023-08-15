@@ -50,7 +50,7 @@
                         <h3 style="color: #F58420;">Our Partners</h3>
                         <div class="partner-logo d-flex flex-wrap">
                             {% for partner in program.partner.all %}
-                                <img class="mr-3" src="{{ partner.logo.url }}" alt="">
+                                <img class="mr-3 mb-3" style="object-fit: contain;" src="{{ partner.logo.url }}" alt="">
                             {% endfor %}
                         </div>
                     </div>

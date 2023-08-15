@@ -52,7 +52,7 @@
                                 <small class="text-primary">#{{ c.name }} </small>
                                 {% endfor %}
                             </div>
-                            <h5 class="card-title"><strong><a class="text-dark" href="{% url 'LearnHillApp:blog_details' blog.id %}">{{ blog.title|truncatewords:10 }}</a></strong></h5>
+                            <h5 class="card-title"><strong><a class="text-dark" href="{% url 'LearnHillApp:blog_details' blog.id %}">{{ blog.title|truncatewords:5 }}</a></strong></h5>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <img src="{{ blog.author.image.url }}" alt="" class="border" style="width: 36px; height: 36px; border-radius: 50%;">

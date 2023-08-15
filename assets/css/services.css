@@ -134,7 +134,21 @@
 
 .select_program{
   transition-duration: 0.4s;
-  width: 10vw;
+  @media(max-width: 360px){
+    width: 50px;
+  }
+  @media(min-width: 360px){
+    width: 75px;
+  }
+  @media(min-width: 576px){
+    width: 100px;
+  }
+  @media(min-width: 992px){
+    width: 125px;
+  }
+  @media(min-width: 1200px){
+    width: 150px;
+  }
 }
 
 .select_program:hover{
@@ -147,3 +161,39 @@
     display: none !important;
   }
 }
+
+
+
+.select_program_text{
+  margin-bottom: 100px;
+  @media(min-width: 360px){
+    font-size: 20px;
+  }
+  @media(min-width: 576px){
+    font-size: 20px;
+  }
+  @media(min-width: 992px){
+    font-size: 30px;
+  }
+  @media(min-width: 1200px){
+    font-size: 40px;
+  }
+}
+
+
+.service_heading{
+  margin-bottom: 100px;
+  @media(min-width: 360px){
+    font-size: 30px;
+  }
+  @media(min-width: 576px){
+    font-size: 40px;
+  }
+  @media(min-width: 992px){
+    font-size: 50px;
+  }
+  @media(min-width: 1200px){
+    font-size: 60px;
+  }
+}
+

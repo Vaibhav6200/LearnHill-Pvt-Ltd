@@ -69,7 +69,7 @@
 
 
 #past_program_cards .partner-logo img{
-  width: 10vw;
+  width: 30%;
 }
 #past_program_cards .project-statistics{
   width: 100%;
@@ -149,3 +149,11 @@
   }
 }
 
+
+
+.community_card_container{
+  @media(max-width:576px){
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}

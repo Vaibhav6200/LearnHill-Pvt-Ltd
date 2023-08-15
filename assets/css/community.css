@@ -136,3 +136,12 @@
       display: none;
     }
 }
+
+
+
+.community_card_container{
+    @media(max-width:576px){
+      display: flex !important;
+      flex-direction: column !important;
+    }
+  }

@@ -89,17 +89,63 @@
 }
 
 
-
-#upcoming_projects .upcoming_project_img{
-  width: 350px;
-  height: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-
 #enquiry .enquiry_image{
   @media(max-width: 800px){
     display: none;
   }
 }
+
+
+.upcoming_project_img{
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: center;
+
+  @media (max-width: 576px) {
+      width: 250px;
+      height: 150px;
+  }
+  @media (min-width: 576px) {
+      width: 300px;
+      height: 200px;
+  }
+  @media (min-width: 992px) {
+      width: 350px;
+      height: 250px;
+  }
+  @media (min-width: 1200px) {
+      width: 400px;
+      height: 300px;
+  }
+}
+.upcoming_project_heading{
+  color: #F58420;
+  @media (max-width: 576px) {
+      margin-top: 10px;
+  }
+  @media (min-width: 576px) {
+      font-size: 20px;
+  }
+  @media (min-width: 992px) {
+      font-size: 24px;
+  }
+  @media (min-width: 1200px) {
+      font-size: 30px;
+  }
+}
+.upcoming_project_description{
+  font-size: 18px;
+  @media (max-width: 576px) {
+      font-size: 10px;
+  }
+  @media (min-width: 576px) {
+      font-size: 12px;
+  }
+  @media (min-width: 992px) {
+      font-size: 15px;
+  }
+  @media (min-width: 1200px) {
+      font-size: 18px;
+  }
+}
+

@@ -20,7 +20,7 @@ def lms(request):
 
 
 def programs(request):
-    return render(request, 'programs.html')
+    return render(request, 'services.html')
 
 
 def past_programs(request):
@@ -34,7 +34,8 @@ def past_programs(request):
 
 
 def community_programs(request):
-    return render(request, 'community_programs.html')
+    community_programs = Program.objects.filter(community=True)
+    return render(request, 'community_programs.html', {'community_programs': community_programs})
 
 
 def contact(request):

@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Services {% endblock %}
+
+{% block extra_css %}
+    <link rel='stylesheet' href="{% static 'css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="hero">
+        <img class="program_banner_img img-fluid" src="{% static 'img/programs/program_banner.jpg' %}" alt="">
+        <div class="overlay">
+            {% include 'includes/navbar1.html' %}
+
+            <div class="program_banner_content d-flex justify-content-center align-items-center">
+                <div class="container d-flex flex-column justify-content-center align-items-center">
+                    <p class="program_heading"><span style="color: #F58420;">Projects Unlocking Future Potential</span>: Empowering the 21st Century Mind </p>
+                    <p class="program_subheading">Explore, Innovate, and excel through our cutting-edge skills, STEM activities, and skills development projects to prepare students for a successful future in a rapidly changing world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services">
+        <div class="container my-5">
+            <p class="text-center" style="font-size: 60px; margin-bottom: 100px;"><span class="p-3" style="border-bottom: 15px solid #F58420;">What we Offer?</span></p>
+            <div class="d-flex justify-content-around align-items-center flex-wrap">
+                <div class="d-flex flex-column " onclick="display1()">
+                    <img class="img-fluid mb-3 select_program" src="{% static 'img/programs/artificial-intelligence.png' %}" alt="">
+                    <p class="text-center" style="font-size: 1.5rem;">21st Century <br>Skill Programs</p>
+                </div>
+                <div class="d-flex flex-column" onclick="display2()">
+                    <img class="img-fluid mb-5 select_program" src="{% static 'img/programs/stem.png' %}" alt="">
+                    <p class="text-center" style="font-size: 1.5rem;">STEM<br>Activities</p>
+                </div>
+                <div class="d-flex flex-column" onclick="display3()">
+                    <img class="img-fluid mb-5 select_program" src="{% static 'img/programs/abilities.png' %}" alt="">
+                    <p class="text-center" style="font-size: 1.5rem;">Skill<br>Development</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-5" id="program_block_1" style="background-color: #fcb07a79; border: 1px solid black;">
+            <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">21st CENTURY SKILL PROGRAMS</h1>
+            <div class="container my-5"><h3 class="text-center">21st Century Skill Programs are educational initiatives designed to equip students with the skills and competencies necessary for success in the modern world.</h3></div>
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Tinkering Lab</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">AI Lab</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">STEM Lab</h5>
+                </div>
+            </div>
+
+            <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
+                <div class="row">
+                    <div class="col-lg-6 program_image d-flex flex-column">
+                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
+                        <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
+                            <div class="p-3"></div>
+                            <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">3D Design & Printing</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Electronics & Coding</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" id="program_block_2" style="background-color: #fcb07a79; border: 1px solid black;">
+            <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">STEM Activities</h1>
+            <div class="container my-5"><h3 class="text-center">STEM Activities are educational initiatives that focus on engaging students in science, technology, engineering, and mathematics (STEM) learning.</h3></div>
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Science/Math Clubs</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Science Congress</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">STEM kits</h5>
+                </div>
+            </div>
+
+            <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
+                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
+                        <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
+                            <div class="p-3"></div>
+                            <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">State/National Quiz</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">State/National Olympiad</h5>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5" id="program_block_3" style="background-color: #fcb07a79; border: 1px solid black;">
+            <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">Skill Development Program</h1>
+            <div class="container my-5"><h3 class="text-center">Skills Development Program focuses on improving the skills and qualifications of individuals to improve employability and career opportunities. Here are some components commonly found in such programs:</h3></div>
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">21st Century <br> Skill Program</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">CODING, ROBOTICS, <br> AI, AUTOMATION</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Entrepreneurial Mindset</h5>
+                </div>
+            </div>
+
+            <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
+                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
+                        <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
+                            <div class="p-3"></div>
+                            <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
+                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around flex-wrap">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Employability Skills Training</h5>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Job Placement</h5>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <section id="enquiry" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1><span style="color: #F58420;">Enquiry</span> Form</h1>
+                    <h5 class="text-muted mb-4">Interested in conducting an Educational Program? Fill out to learn more!</h5>
+
+                    <form action="" method="post">
+                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
+                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
+                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
+                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
+                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
+                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
+                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
+                        <button class="btn text-white w-100 py-2" style="background-color: #F58420;">Submit</button>
+                    </form>
+                </div>
+                <div class="col enquiry_image">
+                    <div class="d-flex h-100 align-items-center">
+                        <img class="w-100 img-fluid" src="{% static 'img/home/enquiry.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'includes/footer.html' %}
+
+    {% block extra_js %}
+        <script src="{% static 'js/program.js' %}"></script>
+    {% endblock %}
+{% endblock %}

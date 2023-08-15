@@ -93,7 +93,7 @@
         height: 300px;
     }
 }
-#community_projects .community_heading{
+.community_heading{
     color: #F58420;
     @media (max-width: 576px) {
         margin-top: 10px;

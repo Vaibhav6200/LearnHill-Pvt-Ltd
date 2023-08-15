@@ -5,6 +5,7 @@
 
 {% block extra_css %}
     <link rel='stylesheet' href="{% static 'css/past_programs.css' %}">
+    <link rel='stylesheet' href="{% static 'css/community.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -24,60 +25,83 @@
         </div>
     </section>
 
+    <h1 class="text-center my-5" style="font-size: 60px;"><span style="color: #F58420;">Past</span> Projects</h1>
+
 
     <section id="past_program_cards">
-        <h1 class="text-center my-5" style="font-size: 60px;"><span style="color: #F58420;">Past</span> Projects</h1>
-
         {% for program in past_programs %}
-        <div class="container border  my-5 p-5 rounded">
-            <div class="row">
-                <div class="col-md-6 project-images">
+        <div class="container my-5 p-5 rounded">
+            <h2 class="text-center card_heading mb-5" style="color: #F58420;">Rashtriya Avishkar Abhiyan, Assam {{ program.heading }}</h2>
+            <div class="row p-5 border shadow" style="background-color: #F4E3D6; border-radius: 20px;">
+                <div class="col-md-5 project-images">
                     <div class="d-flex flex-column">
                         <img class="img-fluid mb-3 past_program_img" src="{{ program.image1.url }}" alt="">
                         <img class="img-fluid mb-3 past_program_img" src="{{ program.image2.url }}" alt="">
                         <img class="img-fluid mb-3 past_program_img" src="{{ program.image3.url }}" alt="">
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h2>{{ program.heading }}</h2>
-                    <p>{{ program.subheading }}</p>
-
-                    <div class="partner-logo my-4">
-                        {% for partner in program.partner.all %}
-                            <img src="{{ partner.logo.url }}" alt="">
-                        {% endfor %}
+                <div class="col-md-7">
+                    <p class="card_description">{{ program.description }} In pursuance of the focus on connecting school-based knowledge to life outside the school, making learning of Science and Mathematics a joyful and meaningful activity; to bring focus to innovation and use of technology, the Ministry of Human Resource Development has set up Rashtriya Avishkar Abhiyan (RAA)</p>
+                    <div class="card_partners my-3">
+                        <h3 style="color: #F58420;">Our Partners</h3>
+                        <div class="partner-logo d-flex flex-wrap justify-content-between">
+                            <img src="assets/img/Partners/STEMpedia.jpeg" alt="">
+                            <img src="assets/img/Partners/SSA Assam.jpeg" alt="">
+                            <img src="assets/img/Partners/IIT Guwahati.jpeg" alt="">
+                            <img src="assets/img/Partners/NIT Silchar .jpg" alt="">
+                        </div>
                     </div>
-                    <p>Timeline: {{ program.start_date }} - {{ program.end_date }}</p>
-                    <div class="my-4"><button class="btn btn-dark">Watch Video</button></div>
-                    <div class="d-flex justify-content-around p-4 project-statistics mb-3">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="{% static 'img/home/offering_1.png' %}" alt="">
-                            <h5>{{ program.country_reached }}+</h5>
-                            <h5>Country</h5>
+                    <div class="d-flex justify-content-around flex-wrap p-4 project-statistics mb-3">
+                        <div class="d-flex flex-column text-center align-items-center">
+                            <img src="assets/img/past programs/location.png" alt="">
+                            <h5>5+</h5>
+                            <small>District <br>Participated</small>
                         </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="{% static 'img/home/offering_2.png' %}" alt="">
-                            <h5>{{ program.educators }}+</h5>
-                            <h5>Educators</h5>
+                        <div class="d-flex flex-column text-center align-items-center">
+                            <img src="assets/img/past programs/state.png" alt="">
+                            <h5>Assam</h5>
+                            <small>State</small>
                         </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="{% static 'img/home/offering_3.png' %}" alt="">
-                            <h5>{{ program.students_impacted }}+</h5>
-                            <h5>Students</h5>
+                        <div class="d-flex flex-column text-center align-items-center">
+                            <img src="assets/img/past programs/Schools.png" alt="">
+                            <h5>330+</h5>
+                            <small>Schools <br>Participated</small>
                         </div>
+                        <div class="d-flex flex-column text-center align-items-center">
+                            <img src="assets/img/past programs/employment.png" alt="">
+                            <h5>120+</h5>
+                            <small>Employment <br>Generated</small>
+                        </div>
+                        <div class="d-flex flex-column text-center align-items-center">
+                            <img src="assets/img/past programs/Student.png" alt="">
+                            <h5>25000+</h5>
+                            <small>Students <br>Participated</small>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Objective</h3>
+                        <ul>
+                            <li>Empower teachers to establish Tinkering Labs in their respective schools</li>
+                            <li>Foster scientific temperament and 21st-century skills among students</li>
+                            <li>Integrate activities into the curriculum for experiential learning, nurturing creativity, critical thinking, problem-solving, and collaboration.</li>
+                            <li>Experience 'learning-by-doing' and think 'out-of-box'</li>
+                        </ul>
                     </div>
                     <div>
                         <h3>Action</h3>
-                        <p> {{ program.action }} </p>
+                        <p>In 2021, the implementation of Tinkering Labs was initiated in 102 schools in Assam. With continued efforts, the initiative expanded to 51 new schools in 2022 and in 2023, Tinkering Lab implementation further expanded to 69 schools. </p>
+                        <p>3 teachers on average from each school attended a 5-day residential training program at IIT Guwahati. Furthermore, Tinkering lab kits were delivered and installed in all schools, and all nominated students underwent physical training in their respective schools</p>
                     </div>
                     <div>
                         <h3>Impact</h3>
-                        <p> {{ program.impact }} </p>
+                        <p>{{program.impact}} Tinkering Lab is a creative and hands-on learning space where individuals can explore, experiment, and invent using a wide range of tools, materials, and technologies. Through hands-on activities and projects, Tinkering Labs encourage innovation, curiosity, and a deep understanding of concepts across various disciplines</p>
                     </div>
                 </div>
             </div>
         </div>
+
         {% empty %}
+
         <div class="container">
             <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
             <h2 class="text-muted">No Past Programs !!!</h2>
@@ -94,18 +118,21 @@
                 <p class="text-center text-muted" style="font-size: 30px;">Unveiling New Projects for Boundless Growth and Learning!</p>
             </div>
             <div class="upcoming_project_cards my-5">
+
+
                 {% for program in upcoming_programs %}
-                <div class="d-flex">
-                    <img class="img-fluid upcoming_project_img" src="{{program.image1.url}}" alt="">
-                    <div class="ml-5 d-flex flex-column justify-content-center">
-                        <h3 class="mb-4">{{ program.heading }}</h3>
-                        <p>The upcoming project aims to revive the existing Tinkering Labs in Assam and the Northeast region. These labs will be equipped with advanced tools, equipment, and resources to promote innovation and practical learning among students. The project will focus on enhancing the infrastructure, training teachers, and providing necessary support to ensure the effective functioning of the Tinkering Labs.</p>
+                <div class="d-flex justify-content-center align-items-center community_card_container {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
+                    <img class="upcoming_project_img mb-4 {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
+                    <div class="d-flex flex-column">
+                        <h3 class="upcoming_project_heading">{{program.heading}}</h3>
+                        <p class="upcoming_project_description text-muted"> {{ program.description }} </p>
                     </div>
                 </div>
-                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
+                <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.5);"></div>
+
                 {% empty %}
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
-                <h2 class="text-muted">No Upcoming Programs !!!</h2>
+                <h2 class="text-muted">No Community Programs !!!</h2>
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
                 {% endfor %}
 

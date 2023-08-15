@@ -35,23 +35,27 @@ class Partner(models.Model):
 
 
 class Program(models.Model):
+    # Statistics
+    # objective
+    # action
     heading = models.CharField(max_length=255)
-    subheading = models.CharField(max_length=255)
+    subheading = models.CharField(max_length=255, blank=True, null=True)
     start_date = models.DateField()
     end_date = models.DateField()
-    location = models.CharField(max_length=255)
-    students_impacted = models.SmallIntegerField()
-    educators = models.SmallIntegerField()
-    country_reached = models.SmallIntegerField()
-    action = models.TextField()
-    impact = models.TextField()
+    location = models.CharField(max_length=255, blank=True, null=True)
+    students_impacted = models.SmallIntegerField(blank=True, null=True)
+    educators = models.SmallIntegerField(blank=True, null=True)
+    country_reached = models.SmallIntegerField(blank=True, null=True)
+    description = models.TextField()
+    impact = models.TextField(blank=True, null=True)
+    partner = models.ManyToManyField(Partner, blank=True)
+    image1 = models.ImageField(upload_to='project_image', help_text="primary image")
+    image2 = models.ImageField(upload_to='project_image', help_text="secondary image for past program page")
+    image3 = models.ImageField(upload_to='project_image', help_text="secondary image for past program page")
+    image4 = models.ImageField(upload_to='project_image', blank=True, null=True)
     past = models.BooleanField()
     upcoming = models.BooleanField()
-    partner = models.ManyToManyField(Partner)
-    image1 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="primary image")
-    image2 = models.ImageField(upload_to='project_image', blank=True, null=True)
-    image3 = models.ImageField(upload_to='project_image', blank=True, null=True)
-    image4 = models.ImageField(upload_to='project_image', blank=True, null=True)
+    community = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

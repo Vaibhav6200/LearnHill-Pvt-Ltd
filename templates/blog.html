@@ -30,7 +30,7 @@
 
 
     <section id="blogs">
-        <div class="container blog-category p-4">
+        <!-- <div class="container blog-category p-4">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <span class="px-3 py-2 mb-3" style="background-color: #FFCD70; border-radius: 10px;"><p class="mb-0">All</p></span>
                 <span class="px-3 py-2 mb-3 border" style="border-radius: 10px;"><p class="mb-0">Uncategorized</p></span>
@@ -38,7 +38,7 @@
                 <span class="px-3 py-2 mb-3 border" style="border-radius: 10px;"><p class="mb-0">AI & Robotics</p></span>
                 <span class="px-3 py-2 mb-3 border" style="border-radius: 10px;"><p class="mb-0">STEM Education</p></span>
             </div>
-        </div>
+        </div> -->
         <div class="blog-cards">
             <div class="container p-4">
                 <div class="d-flex justify-content-around align-items-center mb-4 flex-wrap">
@@ -62,12 +62,15 @@
                             </div>
                         </div>
                     </div>
+                    {% empty %}
+                    <h1 class="text-muted my-5">No Blogs !!!</h1>
                     {% endfor %}
 
                 </div>
             </div>
         </div>
 
+        {% if blogs %}
         <div class="blog-pagination d-flex justify-content-center my-5">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
@@ -89,6 +92,8 @@
                 </ul>
             </nav>
         </div>
+        {% endif %}
+
     </section>
 
 

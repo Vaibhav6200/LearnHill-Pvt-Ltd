@@ -9,7 +9,7 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'logo', 'created_at', 'updated_at']
 
 class ProgramAdmin(admin.ModelAdmin):
-    list_display = ['id', 'heading', 'start_date', 'end_date', 'location', 'students_impacted', 'educators', 'past', 'upcoming', 'community']
+    list_display = ['id', 'heading', 'start_date', 'end_date', 'students_impacted', 'past', 'upcoming', 'community']
     list_display_links = ['id', 'heading']
 
 

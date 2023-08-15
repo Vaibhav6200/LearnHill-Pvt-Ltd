@@ -5,6 +5,18 @@
 
 {% block extra_css %}
     <link rel='stylesheet' href="{% static 'css/services.css' %}">
+
+    <style>
+        .card_image{
+        height: 200px;
+        object-fit: cover;
+        }
+        .card{
+        width: 16rem;
+        border-radius: 20px;
+        }
+
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -205,34 +217,7 @@
 
 
 
-    <section id="enquiry" class="my-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1><span style="color: #F58420;">Enquiry</span> Form</h1>
-                    <h5 class="text-muted mb-4">Interested in conducting an Educational Program? Fill out to learn more!</h5>
-
-                    <form action="" method="post">
-                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
-                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
-                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
-                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
-                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
-                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
-                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
-                        <button class="btn text-white w-100 py-2" style="background-color: #F58420;">Submit</button>
-                    </form>
-                </div>
-                <div class="col enquiry_image">
-                    <div class="d-flex h-100 align-items-center">
-                        <img class="w-100 img-fluid" src="{% static 'img/home/enquiry.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+    {% include 'includes/enquiry.html' %}
     {% include 'includes/footer.html' %}
 
     {% block extra_js %}

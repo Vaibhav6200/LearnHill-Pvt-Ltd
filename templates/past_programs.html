@@ -35,45 +35,48 @@
             <div class="row p-5 border shadow" style="background-color: #F4E3D6; border-radius: 20px;">
                 <div class="col-md-5 project-images">
                     <div class="d-flex flex-column">
-                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image1.url }}" alt="">
-                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image2.url }}" alt="">
-                        <img class="img-fluid mb-3 past_program_img" src="{{ program.image3.url }}" alt="">
+                        <img class="img-fluid mb-4 past_program_img" src="{{ program.image1.url }}" alt="">
+                        <img class="img-fluid mb-4 past_program_img" src="{{ program.image2.url }}" alt="">
+                        <img class="img-fluid mb-4 past_program_img" src="{{ program.image3.url }}" alt="">
+                        {% if program.image4 %}
+                            <img class="img-fluid mb-3 past_program_img" src="{{ program.image4.url }}" alt="">
+                        {% endif %}
+
                     </div>
                 </div>
                 <div class="col-md-7">
                     <p class="card_description">{{ program.description }} In pursuance of the focus on connecting school-based knowledge to life outside the school, making learning of Science and Mathematics a joyful and meaningful activity; to bring focus to innovation and use of technology, the Ministry of Human Resource Development has set up Rashtriya Avishkar Abhiyan (RAA)</p>
                     <div class="card_partners my-3">
                         <h3 style="color: #F58420;">Our Partners</h3>
-                        <div class="partner-logo d-flex flex-wrap justify-content-between">
-                            <img src="assets/img/Partners/STEMpedia.jpeg" alt="">
-                            <img src="assets/img/Partners/SSA Assam.jpeg" alt="">
-                            <img src="assets/img/Partners/IIT Guwahati.jpeg" alt="">
-                            <img src="assets/img/Partners/NIT Silchar .jpg" alt="">
+                        <div class="partner-logo d-flex flex-wrap">
+                            {% for partner in program.partner.all %}
+                                <img class="mr-3" src="{{ partner.logo.url }}" alt="">
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="d-flex justify-content-around flex-wrap p-4 project-statistics mb-3">
                         <div class="d-flex flex-column text-center align-items-center">
-                            <img src="assets/img/past programs/location.png" alt="">
+                            <img src="{% static 'img/past_programs/location.png' %}" alt="">
                             <h5>5+</h5>
                             <small>District <br>Participated</small>
                         </div>
                         <div class="d-flex flex-column text-center align-items-center">
-                            <img src="assets/img/past programs/state.png" alt="">
+                            <img src="{% static 'img/past_programs/state.png' %}" alt="">
                             <h5>Assam</h5>
                             <small>State</small>
                         </div>
                         <div class="d-flex flex-column text-center align-items-center">
-                            <img src="assets/img/past programs/Schools.png" alt="">
+                            <img src="{% static 'img/past_programs/Schools.png' %}" alt="">
                             <h5>330+</h5>
                             <small>Schools <br>Participated</small>
                         </div>
                         <div class="d-flex flex-column text-center align-items-center">
-                            <img src="assets/img/past programs/employment.png" alt="">
+                            <img src="{% static 'img/past_programs/employment.png' %}" alt="">
                             <h5>120+</h5>
                             <small>Employment <br>Generated</small>
                         </div>
                         <div class="d-flex flex-column text-center align-items-center">
-                            <img src="assets/img/past programs/Student.png" alt="">
+                            <img src="{% static 'img/past_programs/Student.png' %}" alt="">
                             <h5>25000+</h5>
                             <small>Students <br>Participated</small>
                         </div>
@@ -140,32 +143,7 @@
         </div>
     </section>
 
-    <section id="enquiry" class="my-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1><span style="color: #F58420;">Enquiry</span> Form</h1>
-                    <h5 class="text-muted mb-4">Interested in conducting an Educational Program? Fill out to learn more!</h5>
-
-                    <form action="" method="post">
-                        <input type="text" name="full_name" id="full_name" class="form-control mb-2" placeholder="Full Name">
-                        <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email Address">
-                        <input type="text" name="country" id="country" class="form-control mb-2" placeholder="Country">
-                        <input type="text" name="state" id="state" class="form-control mb-2" placeholder="State">
-                        <input type="text" name="org_name" id="org_name" class="form-control mb-2" placeholder="Name of School / Organization">
-                        <input type="number" name="phone" id="phone" class="form-control mb-2" placeholder="Mobile Number">
-                        <textarea name="query" id="query" cols="30" rows="5" class="form-control mb-2" placeholder="Type your query here..."></textarea>
-                        <button class="btn text-white w-100 py-2" style="background-color: #0172D0;">Submit</button>
-                    </form>
-                </div>
-                <div class="col enquiry_image">
-                    <div class="d-flex h-100 align-items-center">
-                        <img class="w-100 img-fluid" src="{% static 'img/home/enquiry.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'includes/enquiry.html' %}
 
 
     {% include 'includes/footer.html' %}

@@ -27,40 +27,40 @@
     </section>
 
 
-    <section id="statistics">
+    <section id="statistics" style="margin: 100px 0px;">
         <div class="container my-5">
             <h1 class="text-center mb-5 font-weight-bold">Statistics</h1>
             <div class="statistic_container d-flex justify-content-between w-100 align-items-center flex-wrap">
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/State.jpg' %}" alt="">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/states.png' %}" alt="">
                     <h5>{{ statistics.states_covered }}+</h5>
-                    <h5>States Covered</h5>
+                    <h5 class="text-center">States Covered</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/Schools.jpg' %}" alt="">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/school.png' %}" alt="">
                     <h5>{{ statistics.schools }}+</h5>
-                    <h5>Schools</h5>
+                    <h5 class="text-center">Schools</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/teacher.jpg' %}" alt="">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/teachers.png' %}" alt="">
                     <h5>{{ statistics.teachers_trained }}+</h5>
-                    <h5>Teachers Trained</h5>
+                    <h5 class="text-center">Teachers <br>Trained</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/Student.jpg' %}" alt="">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/students.png' %}" alt="">
                     <h5>{{ statistics.students_impacted }}+</h5>
-                    <h5>Student Impacted</h5>
+                    <h5 class="text-center">Student <br>Impacted</h5>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center mb-4">
-                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/employment.jpg' %}" alt="">
+                    <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/employment.png' %}" alt="">
                     <h5>{{ statistics.employment_generated }}+</h5>
-                    <h5>Employment Generated</h5>
+                    <h5 class="text-center">Employment <br>Generated</h5>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="my-5" id="about">
+    <section id="about"  style="margin: 100px 0px;">
         <div class="container my-5">
             <h1 class="text-center mb-5 font-weight-bold mb-4">About LearnHill</h1>
             <h3 class="text-muted text-center mb-3">Igniting the potential of the next generation through cutting-edge education services tailored to the K12 ecosystem</h3>
@@ -69,13 +69,13 @@
     </section>
 
 
-    <section class="my-5" id="partners">
+    <section id="partners" style="margin: 100px 0px;">
         <h1 class="text-center mb-5 font-weight-bold">Our Partners</h1>
-        <div class="container mt-5 p-4">
+        <div class="container mt-5">
             <div class="d-flex justify-content-around mb-4 flex-wrap align-self-center">
 
                 {% for partner in partners %}
-                <div class="flip-card mb-4">
+                <div class="flip-card mb-4 shadow">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
                         <img class="partner_image" src="{{ partner.logo.url }}" alt="Avatar">
@@ -91,19 +91,14 @@
         </div>
     </section>
 
-    <section class="my-5" id="projects">
+    <section id="projects" style="margin: 100px 0px;">
         <h1 class="text-center mb-5 font-weight-bold">Past Projects</h1>
 
         <div class="container">
-            <div class="row">
-                <div class="col-1 d-flex justify-content-center align-items-center">
-                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="background-color: white; border: none;">
-                        <i class="fa fa-2x fa-arrow-left text-dark"></i>
-                    </a>
-                </div>
 
-                <div class="col-10">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="width: auto; background-color: #FCF7DE;">
+            <div class="row">
+                <div class="col">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
 
                             {% for program in past_programs %}
@@ -112,35 +107,24 @@
                                 {% else %}
                                 <div class="carousel-item">
                                 {% endif %}
-                                    <div class="container p-4">
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="d-flex justify-content-center h-100 align-items-center"><img class="img-fluid rounded slider_image" src="{{ program.image1.url }}" alt=""></div>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <div class="d-flex flex-column">
-                                                    <h3>{{program.heading}}</h3>
-                                                    <div class="my-2" style="border: 1px solid black;"></div>
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="d-flex flex-column">
-                                                            <h6>Supported By</h6>
-                                                            {% for partner in program.partner.all %}
-                                                            <small class="mb-0">{{ partner.name }}</small>
-                                                            {% endfor %}
-                                                        </div>
-                                                        <div class="d-flex flex-column">
-                                                            <h6>Location</h6>
-                                                            <small class="mb-0">{{program.location}}</small>
-                                                        </div>
-                                                        <div class="d-flex flex-column">
-                                                            <h6>Student Impacted</h6>
-                                                            <small class="mb-0">{{program.students_impacted}}+</small>
-                                                        </div>
-                                                    </div>
 
-                                                    <p class=" mt-3">{{ program.description|truncatewords:23 }}</p>
-                                                    <a class="text-dark" href="{% url 'LearnHillApp:past_programs' %}">read more ...</a>
+                                    <div class="container px-5 py-3 border card_container">
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <img class="img-fluid card_image_main" src="{{ program.image1.url }}" style="border-radius: 30px;" alt="">
+                                            <div class="d-flex flex-column">
+                                                <p class="mb-3 card_heading">{{program.heading}} <br> {{ program.start_date|date:"Y" }}-{{ program.end_date|date:"y" }} </p>
+                                                <div class="d-flex align-items-center justify-content-between shadow px-4 py-3 mb-3 bg-white" style="border-radius: 30px;">
+                                                    <img class="mr-5 img-fluid partner_card_image" src="{% static 'img/home/assam.png' %}" alt="">
+                                                    <p class="partner_card_text">Assam</p>
                                                 </div>
+                                                <div class="d-flex align-items-center justify-content-between shadow px-4 py-3 mb-4 bg-white" style="border-radius: 30px;">
+                                                    <img class="mr-5 img-fluid partner_card_image" src="{% static 'img/home/statistics/employment.png' %}" alt="">
+                                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                                        <p class="partner_card_text">{{program.students_impacted}}+</p>
+                                                        <div class="mb-0 text-center" style="color: #ED7D31;">Students Impacted</div>
+                                                    </div>
+                                                </div>
+                                                <p style="margin-left: auto;"><a class="see_project_btn" href="" style="font-size: 20px;">See Project <i class="fa fa-arrow-right"></i></a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -148,11 +132,6 @@
                             {% endfor %}
                         </div>
                     </div>
-                </div>
-                <div class="col-1 d-flex justify-content-center align-items-center">
-                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next" style="background-color: white; border: none;">
-                        <i class="fa fa-2x fa-arrow-right text-dark"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -165,7 +144,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center">
                 <div class="card shadow my-3 mx-4">
                     <div class="d-flex justify-content-center">
-                        <img class="card-img-top img-fluid offering_img mt-2" src="{% static 'img/programs/artificial-intelligence.png' %}" alt="Card image cap">
+                        <img class="card-img-top img-fluid mt-4" src="{% static 'img/programs/artificial-intelligence.png' %}" style="width: 130px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title text-center mb-4">21<sup>st</sup> Century Skill Programs</h4>
@@ -195,7 +174,7 @@
                 </div>
                 <div class="card shadow my-3 mx-4">
                     <div class="d-flex justify-content-center">
-                        <img class="card-img-top img-fluid offering_img p-4" src="{% static 'img/programs/stem.png' %}" alt="Card image cap">
+                        <img class="card-img-top img-fluid offering_img p-4" src="{% static 'img/programs/stem.png' %}" style="width: 160px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title mb-5 text-center">STEM Activities</h4>
@@ -224,11 +203,11 @@
                     </div>
                 </div>
                 <div class="card shadow my-3 mx-4">
-                    <div class="d-flex justify-content-center">
-                        <img class="card-img-top img-fluid offering_img" src="{% static 'img/programs/abilities.png' %}" alt="Card image cap">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img class="card-img-top img-fluid offering_img" src="{% static 'img/programs/abilities.png' %}" style="width: 130px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title text-center">Skill Development Programs</h4>
+                        <h4 class="card-title text-center mb-4">Skill Development Programs</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
@@ -316,10 +295,18 @@
 
 
     <section class="my-5" id="impact">
-        <h1 class="text-center mb-5 font-weight-bold">Our Impact Programs</h1>
+        <h1 class="text-center mb-5">Our Impact Programs</h1>
+
+
+
         <div class="container m-auto">
+            <p class="mb-5">
+                LearnHill has made a significant impact by providing neo-skills education to school students and upskilling teachers to impart 21st-century skills. They have successfully implemented many education-related projects, benefiting more than 75,000 students in 700+ schools.
+                LearnHill's impactful Programs, including Lab Revival, Free Upskilling, and Student Literacy, are driving positive change in education.
+            </p>
+
             <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
-                <img class="img-fluid impact_img mr-5" src="{% static 'img/home/impact_1.jpg' %}" alt="">
+                <img class="img-fluid impact_img mr-5" src="{% static 'img/home/impact/Free upskilling.jpg' %}" alt="">
                 <div class="d-flex flex-column">
                     <h3>Lab Revival</h3>
                     <p>The Purpose of the Lab Revival Program is to bring new life to school laboratories by revitalizing and mordernizing them.</p>
@@ -336,10 +323,10 @@
                         <button class="btn text-white" style="background-color: #F58420;">Explore More</button>
                     </span>
                 </div>
-                <img class="img-fluid impact_img ml-5" src="{% static 'img/home/impact_2.jpg' %}" alt="">
+                <img class="img-fluid impact_img ml-5" src="{% static 'img/home/impact/Lab revival.jpg' %}" alt="">
             </div>
             <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
-                <img class="img-fluid impact_img mr-5" src="{% static 'img/home/impact_3.jpg' %}" alt="">
+                <img class="img-fluid impact_img mr-5" src="{% static 'img/home/impact/Student literacy.jpg' %}" alt="">
                 <div class="d-flex flex-column">
                     <h3>Student Literacy</h3>
                     <p>Student Literacy is Foundational Skill that empowers individuals, fosters critical thinking, and supports academic and personal Growth</p>
@@ -352,7 +339,7 @@
     </section>
 
 
-    <section id="testimonials" style="margin: 10rem 0 0 0;">
+    <section id="testimonials" style="margin: 120px 0px;">
         <h1 class="text-center mb-5">Feedback & Testimonials</h1>
 
         <div class="container">

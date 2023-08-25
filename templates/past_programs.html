@@ -35,9 +35,15 @@
             <div class="row p-5 border shadow" style="background-color: #F4E3D6; border-radius: 20px;">
                 <div class="col-md-5 project-images">
                     <div class="d-flex flex-column">
+                        {% if program.image1 %}
                         <img class="img-fluid mb-4 past_program_img" src="{{ program.image1.url }}" alt="">
+                        {% endif %}
+                        {% if program.image2 %}
                         <img class="img-fluid mb-4 past_program_img" src="{{ program.image2.url }}" alt="">
+                        {% endif %}
+                        {% if program.image3 %}
                         <img class="img-fluid mb-4 past_program_img" src="{{ program.image3.url }}" alt="">
+                        {% endif %}
                         {% if program.image4 %}
                             <img class="img-fluid mb-3 past_program_img" src="{{ program.image4.url }}" alt="">
                         {% endif %}

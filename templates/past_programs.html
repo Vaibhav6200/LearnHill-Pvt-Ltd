@@ -53,24 +53,32 @@
                 <div class="col-md-7">
                     <p class="card_description">{{ program.description }} In pursuance of the focus on connecting school-based knowledge to life outside the school, making learning of Science and Mathematics a joyful and meaningful activity; to bring focus to innovation and use of technology, the Ministry of Human Resource Development has set up Rashtriya Avishkar Abhiyan (RAA)</p>
                     <div class="card_partners my-3">
-                        <h3 style="color: #F58420;">Our Partners</h3>
-
+                        <div class="d-flex justify-content-around align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid mr-3" src="{% static 'img/past_programs/assam.png' %}" style="width: 7rem;" alt="">
+                                <p class="d-flex" style="color: #F58420; font-size: 1.5rem;">{{ program.state }}</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid mr-3" src="{% static 'img/home/statistics/districts.png' %}" style="width: 3rem;" alt="">
+                                <p class="d-flex" style="color: #F58420; font-size: 1.5rem;">{{ program.district_participated }} DISTRICTS</p>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-around flex-wrap p-4 project-statistics mb-3">
-                            <div class="d-flex align-items-center shadow p-3" style="border-radius: 30px;">
+                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
                                 <img class="img-fluid mr-2" src="{% static 'img/home/statistics/school.png' %}" alt="">
                                 <div class="d-flex flex-column">
                                     <h5>{{ program.schools_participated }}+</h5>
                                     <small>Schools </small>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center shadow p-3" style="border-radius: 30px;">
+                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
                                 <img class="img-fluid mr-2" src="{% static 'img/home/statistics/students.png' %}" alt="">
                                 <div class="d-flex flex-column">
                                     <h5>{{program.students_trained}}+</h5>
                                     <small>Students <br>Trained</small>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center shadow p-3" style="border-radius: 30px;">
+                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
                                 <img class="img-fluid mr-2" src="{% static 'img/home/statistics/teachers.png' %}" alt="">
                                 <div class="d-flex flex-column">
                                     <h5>{{program.teachers_trained}}+</h5>
@@ -79,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-5">
                         <h3 style="color: #F58420;">SUPPORT</h3>
                         <div class="d-flex flex-wrap shadow" style="border-radius: 30px;">
                             <div class="partner-logo d-flex flex-wrap p-2">

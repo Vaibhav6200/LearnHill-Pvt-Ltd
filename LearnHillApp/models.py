@@ -40,9 +40,12 @@ class Program(models.Model):
     schools_participated = models.CharField(max_length=10, blank=True, null=True)
     students_trained = models.CharField(max_length=10, blank=True, null=True)
     teachers_trained = models.CharField(max_length=10, blank=True, null=True)
-    state = models.CharField(max_length=10, blank=True, null=True)
     district_participated = models.CharField(max_length=10, blank=True, null=True)
+    state = models.CharField(max_length=100, blank=True, null=True)
+    # state_image = models.ImageField(upload_to='state_images', help_text="upload image of state for past program page")
+
     partner = models.ManyToManyField(Partner, blank=True)
+
     objective = RichTextField(blank=True, null=True)
     action = RichTextField(blank=True, null=True)
     impact = models.TextField(blank=True, null=True)
@@ -50,6 +53,9 @@ class Program(models.Model):
     image2 = models.ImageField(upload_to='project_image', help_text="secondary image for past program page")
     image3 = models.ImageField(upload_to='project_image', help_text="secondary image for past program page")
     image4 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
+    # image5 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
+    # image6 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
+
     start_date = models.DateField()
     end_date = models.DateField()
     past = models.BooleanField()

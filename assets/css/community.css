@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'metropolis-black', sans-serif;
+    font-family: 'metropolis';
 }
 
 
@@ -94,7 +94,6 @@
     }
 }
 .community_heading{
-    color: #F58420;
     @media (max-width: 576px) {
         margin-top: 10px;
     }

@@ -64,7 +64,6 @@
     margin-bottom: 1.5rem;
   }
 
-
   @media (min-width: 350px) {
     font-size: 20px;
     line-height: 1.2;
@@ -90,6 +89,8 @@
     margin-bottom: 3rem;
   }
 }
+
+
 
 #hero p {
   text-transform: uppercase;

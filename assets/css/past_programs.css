@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'metropolis-black', sans-serif;
+    font-family: 'metropolis';
   }
 
 
@@ -73,7 +73,6 @@
 }
 #past_program_cards .project-statistics{
   width: 100%;
-  background-color: #ffa6009c;
   border-radius: 10px;
 }
 #past_program_cards .project-statistics img{

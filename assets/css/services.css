@@ -115,15 +115,16 @@
 
 
 
-.program_card_image{
+.programs_card img{
   width: 250px;
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
   object-position: center;
+  border: 10px solid #F58420;
 }
 
-.program_card_text{
+.programs_card h5{
   font-weight: 700;
   font-size: 1.5rem;
   border-radius: 20px;
@@ -151,11 +152,6 @@
   }
 }
 
-.select_program:hover{
-  box-shadow: 0 0 30px 30px #f5832048;
-}
-
-
 .program_image{
   @media(max-width: 992px) {
     display: none !important;
@@ -165,24 +161,19 @@
 
 
 .select_program_text{
+  font-size: calc(18px + 0.390625vw);
+}
+
+.service_header{
   margin-bottom: 100px;
-  @media(min-width: 360px){
-    font-size: 20px;
-  }
-  @media(min-width: 576px){
-    font-size: 20px;
-  }
-  @media(min-width: 992px){
-    font-size: 30px;
-  }
-  @media(min-width: 1200px){
-    font-size: 40px;
-  }
+  border-radius: 35px;
+  cursor: pointer;
 }
 
 
 .service_heading{
   margin-bottom: 100px;
+
   @media(min-width: 360px){
     font-size: 30px;
   }
@@ -197,3 +188,7 @@
   }
 }
 
+
+.programs_card{
+  cursor: pointer;
+}

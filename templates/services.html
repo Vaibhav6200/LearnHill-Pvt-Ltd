@@ -39,22 +39,22 @@
         <div class="container my-5">
             <p class="text-center service_heading"><span class="p-3" style="border-bottom: 15px solid #F58420;">What we Offer?</span></p>
             <div class="d-flex justify-content-around align-items-center flex-wrap">
-                <div class="d-flex flex-column align-items-center" onclick="display1()">
+                <div class="d-flex flex-column align-items-center service_header px-5 py-4" id="service_header_1" onclick="display1()">
                     <img class="img-fluid mb-3 select_program" src="{% static 'img/programs/artificial-intelligence.png' %}" alt="">
-                    <p class="text-center select_program_text" style="font-size: 1.5rem;">21st Century <br>Skill Programs</p>
+                    <p class="text-center select_program_text">21st Century <br>Skill Programs</p>
                 </div>
-                <div class="d-flex flex-column align-items-center" onclick="display2()">
+                <div class="d-flex flex-column align-items-center service_header px-5 py-4" id="service_header_2" onclick="display2()">
                     <img class="img-fluid mb-3 select_program" src="{% static 'img/programs/stem.png' %}" alt="">
-                    <p class="text-center select_program_text" style="font-size: 1.5rem;">STEM<br>Activities</p>
+                    <p class="text-center select_program_text">STEM<br>Activities</p>
                 </div>
-                <div class="d-flex flex-column align-items-center" onclick="display3()">
+                <div class="d-flex flex-column align-items-center service_header px-5 py-4" id="service_header_3" onclick="display3()">
                     <img class="img-fluid mb-3 select_program" src="{% static 'img/programs/abilities.png' %}" alt="">
-                    <p class="text-center select_program_text" style="font-size: 1.5rem;">Skill<br>Development</p>
+                    <p class="text-center select_program_text">Skill<br>Development</p>
                 </div>
             </div>
         </div>
 
-        <div class="container my-5 d-none">
+        <div class="container my-5 d-none" id="service_mobile">
             <div class="d-flex justify-content-between align-items-center border shadow px-5 py-3 mb-3" onclick="display1()" style="border-radius: 30px; background-color: #ED7D31;;">
                 <p class="mb-0 text-white" style="font-size: 2rem;">21<sup>st</sup> Century <br>Skill Program</p>
                 <img class="img-fluid" src="{% static 'img/programs/artificial-intelligence.png' %}" style="width: 6rem;" alt="">
@@ -74,17 +74,17 @@
             <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">21st CENTURY SKILL PROGRAMS</h1>
             <div class="container my-5"><h3 class="text-center">21st Century Skill Programs are educational initiatives designed to equip students with the skills and competencies necessary for success in the modern world.</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Tinkering Lab</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard1()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/tinkering.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Tinkering Lab</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">AI Lab</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard2()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">AI Lab</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">STEM Lab</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard3()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/stem_activities.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">STEM Lab</h5>
                 </div>
             </div>
 
@@ -96,29 +96,29 @@
                         <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
+                        <h2 id="service_card_heading"></h2>
                         <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
                             <div class="p-3"></div>
                             <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                            <div id="execution_point_1" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="execution_point_2" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="execution_point_3" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="execution_point_4" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="execution_point_5" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="execution_point_6" class="text-center py-3 mx-3 text-white font-weight-bold"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">3D Design & Printing</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard4()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">3D Design & Printing</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Electronics & Coding</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard5()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Electronics & Coding</h5>
                 </div>
             </div>
         </section>
@@ -127,108 +127,109 @@
             <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">STEM Activities</h1>
             <div class="container my-5"><h3 class="text-center">STEM Activities are educational initiatives that focus on engaging students in science, technology, engineering, and mathematics (STEM) learning.</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Science/Math Clubs</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard1()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/tinkering.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Science/Maths Clubs</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Science Congress</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard2()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Science Congress</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">STEM kits</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard3()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/stem_activities.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">STEM Kits</h5>
                 </div>
             </div>
 
             <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
+                    <div class="col-lg-6 program_image d-flex flex-column">
                         <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                         <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                         <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
+                        <h2 id="stem_service_card_heading"></h2>
                         <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
                             <div class="p-3"></div>
                             <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                            <div id="stem_execution_point_1" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="stem_execution_point_2" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="stem_execution_point_3" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="stem_execution_point_4" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="stem_execution_point_5" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="stem_execution_point_6" class="text-center py-3 mx-3 text-white font-weight-bold"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">State/National Quiz</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard4()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">State/National Quiz</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">State/National Olympiad</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard5()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">State/National Olympiad</h5>
                 </div>
             </div>
         </section>
-
 
         <section class="py-5" id="program_block_3" style="background-color: #fcb07a79; border: 1px solid black;">
             <h1 class="text-white text-center font-weight-bold py-3" style="background-color: #F58420;">Skill Development Program</h1>
             <div class="container my-5"><h3 class="text-center">Skills Development Program focuses on improving the skills and qualifications of individuals to improve employability and career opportunities. Here are some components commonly found in such programs:</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">21st Century <br> Skill Program</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard1()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/tinkering.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">21st Century Skill Training</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">CODING, ROBOTICS, <br> AI, AUTOMATION</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard2()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Coding, Robotics, AI, Automation</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Entrepreneurial Mindset</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard3()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/stem_activities.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Entrepreneurial Mindset</h5>
                 </div>
             </div>
 
             <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
+                    <div class="col-lg-6 program_image d-flex flex-column">
                         <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                         <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                         <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h2 class="mb-4">Develops students' skills in machine learning and data analysis, enabling them to understand and work with AI technologies</h2>
-                        <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
+                        <h2 id="skill_service_card_heading"></h2>
+                        <div class="container p-0" id="skill_execution_container" style="background-color: #F58420; border-radius: 20px;">
                             <div class="p-3"></div>
                             <div class="text-center p-3 font-weight-bold" style="font-size: 20px; background-color: white;">EXECUTION DETAILS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">DELIVERY OF CUSTOMIZED KITS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">SET-UP OF LABS</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">TEACHER TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">STUDENT TRAINING PROGRAM</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;">YEAR-LONG HANDHOLDING</div>
-                            <div class="text-center py-3 mx-3 text-white font-weight-bold"> COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS</div>
+                            <div id="skill_execution_point_1" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="skill_execution_point_2" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="skill_execution_point_3" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="skill_execution_point_4" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="skill_execution_point_5" class="text-center py-3 mx-3 text-white font-weight-bold" style="font-size: 20px; border-bottom: 5px solid white;"></div>
+                            <div id="skill_execution_point_6" class="text-center py-3 mx-3 text-white font-weight-bold"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="d-flex justify-content-around flex-wrap">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Employability Skills Training</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard4()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Employability Skills Training</h5>
                 </div>
-                <div class="d-flex flex-column align-items-center">
-                    <img class="card-img-top program_card_image shadow" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
-                    <h5 class="card-title text-center px-3 py-2 my-4 program_card_text">Job Placement</h5>
+                <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard5()" style="cursor: pointer;">
+                    <img class="card-img-top img-fluid" src="{% static 'img/programs/program_1.jpg' %}" alt="Card image cap">
+                    <h5 class="card-title text-center px-3 py-2 my-4">Job Placement</h5>
                 </div>
             </div>
         </section>
+
+
     </section>
 
 

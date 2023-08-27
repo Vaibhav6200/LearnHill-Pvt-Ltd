@@ -314,7 +314,11 @@
     height: 90%;
     object-fit: cover;
     object-position: center;
-    border: 1rem solid #ED7D31;
+    border: 10px solid #ED7D31;
+
+    @media (max-width: 576px) {
+      border: 8px solid #ED7D31;
+    }
 }
 
 .card_heading{

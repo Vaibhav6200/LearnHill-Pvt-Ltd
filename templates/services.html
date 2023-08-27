@@ -36,8 +36,8 @@
 
 
     <section id="services">
-        <div class="container my-5">
-            <p class="text-center service_heading"><span class="p-3" style="border-bottom: 15px solid #F58420; border-radius: 100px;">What we Offer?</span></p>
+        <p class="text-center service_heading my-5"><span class="p-3" style="border-bottom: 15px solid #F58420; border-radius: 100px;">What we Offer?</span></p>
+        <div class="container my-5" id="service_desktop">
             <div class="d-flex justify-content-around align-items-center flex-wrap">
                 <div class="d-flex flex-column align-items-center service_header px-5 py-4" id="service_header_1" onclick="display1()">
                     <img class="img-fluid mb-3 select_program" src="{% static 'img/programs/artificial-intelligence.png' %}" alt="">
@@ -54,18 +54,18 @@
             </div>
         </div>
 
-        <div class="container my-5 d-none" id="service_mobile">
+        <div class="container my-5" id="service_mobile">
             <div class="d-flex justify-content-between align-items-center border shadow px-5 py-3 mb-3" onclick="display1()" style="border-radius: 30px; background-color: #ED7D31;;">
-                <p class="mb-0 text-white" style="font-size: 2rem;">21<sup>st</sup> Century <br>Skill Program</p>
-                <img class="img-fluid" src="{% static 'img/programs/artificial-intelligence.png' %}" style="width: 6rem;" alt="">
+                <p class="mb-0 text-white">21<sup>st</sup> Century <br>Skill Program</p>
+                <img class="img-fluid" src="{% static 'img/programs/artificial-intelligence.png' %}" style="width: 5rem;" alt="">
             </div>
             <div class="d-flex justify-content-between align-items-center border shadow px-5 py-3 mb-3" onclick="display2()" style="border-radius: 30px; background-color: #ED7D31;;">
-                <p class="mb-0 text-white" style="font-size: 2rem;">Stem <br>Activities</p>
-                <img class="img-fluid" src="{% static 'img/programs/stem.png' %}" style="width: 6rem;" alt="">
+                <p class="mb-0 text-white">Stem <br>Activities</p>
+                <img class="img-fluid" src="{% static 'img/programs/stem.png' %}" style="width: 5rem;" alt="">
             </div>
             <div class="d-flex justify-content-between align-items-center border shadow px-5 py-3 mb-3" onclick="display3()" style="border-radius: 30px; background-color: #ED7D31;;">
-                <p class="mb-0 text-white" style="font-size: 2rem;">Skill <br>Development</p>
-                <img class="img-fluid" src="{% static 'img/programs/abilities.png' %}" style="width: 6rem;" alt="">
+                <p class="mb-0 text-white">Skill <br>Development</p>
+                <img class="img-fluid" src="{% static 'img/programs/abilities.png' %}" style="width: 5rem;" alt="">
             </div>
         </div>
 

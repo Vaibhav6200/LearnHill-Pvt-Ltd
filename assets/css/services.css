@@ -192,3 +192,25 @@
 .programs_card{
   cursor: pointer;
 }
+
+
+
+#service_desktop{
+  @media(max-width: 767px){
+    display: none;
+  }
+  @media(min-width: 767px){
+    display: block;
+  }
+}
+#service_mobile{
+  font-size: 2rem;
+
+  @media(max-width: 767px){
+    display: block;
+    font-size: 1.5rem;
+  }
+  @media(min-width: 767px){
+    display: none;
+  }
+}

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Home {% endblock %}
+{% block title %} Community {% endblock %}
 
 {% block extra_css %}
     <link rel='stylesheet' href="{% static 'css/community.css' %}">
@@ -16,26 +16,26 @@
             {% include 'includes/navbar1.html' %}
 
             <div class="community_banner_content d-flex justify-content-center align-items-center">
-                <div class="container d-flex flex-column justify-content-center align-items-center">
-                    <p class="community_heading"> Community Power: Joining Hands, <span style="color: #F58420;">Changing Lives!</span>  </p>
-                    <p class="community_subheading">Through inclusive education, skill development, and access to essential services, we empower individuals to reach their full potential, uplifting communities and creating a legacy of empowerment for generations to come.</p>
+                <div class="container d-flex flex-column">
+                    <p class="community_banner_heading"> Community Power: Joining Hands, <br><span style="color: #F58420;">Changing Lives!</span>  </p>
+                    <p class="community_banner_subheading">Through inclusive education, skill development, and access to essential services, we empower individuals to reach their full potential, uplifting communities and creating a legacy of empowerment for generations to come.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <h1 class="text-center" style="font-size: 60px; margin: 50px 0px 70px;"><span style="color: #F58420;">Community</span> Projects</h1>
+    <h1 class="text-center main_community_heading"><span style="color: #F58420;">Community</span> Projects</h1>
 
     <section class="my-5" id="community_projects">
         <div class="container">
 
             {% for program in community_programs %}
             <div class="my-5 d-flex justify-content-center align-items-center community_card_container {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
-                <img class="community_img mb-4 {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
+                <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
 
                 <div class="d-flex flex-column">
-                    <p class="community_heading">{{program.heading}}</p>
-                    <p class="community_description text-muted"> {{ program.description }} </p>
+                    <p class="community_card_heading">{{program.heading}}</p>
+                    <p class="community_card_description text-muted"> {{ program.description }} </p>
                 </div>
             </div>
 

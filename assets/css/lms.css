@@ -69,6 +69,18 @@
 
 .card-title{
   color: #3b4351;
+  @media (max-width: 576px) {
+    font-size: 1.4rem;
+  }
+  @media (min-width: 576px) {
+      font-size: 1.6rem;
+  }
+  @media (min-width: 992px) {
+      font-size: 1.8rem;
+  }
+  @media (min-width: 1200px) {
+      font-size: 2rem;
+  }
 }
 
 

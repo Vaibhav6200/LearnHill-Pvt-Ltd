@@ -17,104 +17,103 @@
 
             <div class="past_program_banner_content d-flex justify-content-center align-items-center">
                 <div class="container d-flex flex-column">
-                    <p class="past_program_heading mb-0">Unlock Innovation through</p>
-                    <p class="past_program_heading" style="color: #F58420;">Inspiring Projects</p>
-                    <p class="past_program_subheading">Explore the remarkable projects done by LearnHill Technologies. As the rapidly growing network of educators, students, and institutions, We creates extraordinary projects in coding, AI, robotics & more.</p>
+                    <p class="banner_heading mb-0">Unlock Innovation through</p>
+                    <p class="banner_heading" style="color: #F58420;">Inspiring Projects</p>
+                    <p class="banner_subheading">Explore the remarkable projects done by LearnHill Technologies. As the rapidly growing network of educators, students, and institutions, We creates extraordinary projects in coding, AI, robotics & more.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <h1 class="text-center my-5" style="font-size: 60px;"><span style="color: #F58420;">Past</span> Projects</h1>
+    <p class="text-center my-5 section_heading"><span style="color: #F58420;">Past</span> Projects</p>
 
 
     <section id="past_program_cards">
         {% for program in past_programs %}
-        <div class="container my-5 pt-5" style="background-color: #F58420; border-radius: 20px 20px 40px 40px;">
-            <h2 class="text-center card_heading mb-5 text-white">Rashtriya Avishkar Abhiyan, Assam {{ program.heading }}</h2>
+        <div class="container my-5" style="background-color: #F58420; border-radius: 20px 20px 40px 40px;">
+            <p class="text-center mb-0 py-3 text-white card_heading">{{ program.heading }}</p>
             <div class="row p-5 border shadow" style="background-color: white; border-radius: 40px;">
-                <div class="col-md-5 project-images">
+                <div class="col-lg-5 project-images">
                     <div class="d-flex flex-column">
                         {% if program.image1 %}
                         <img class="img-fluid mb-4 past_program_img" src="{{ program.image1.url }}" alt="" style="border: 10px solid #F58420;">
                         {% endif %}
                         {% if program.image2 %}
-                        <img class="img-fluid mb-4 past_program_img" src="{{ program.image2.url }}" alt="" style="border: 10px solid #F58420;">
+                        <img class="img-fluid mb-4 past_program_img" id="past_program_img_2" src="{{ program.image2.url }}" alt="" style="border: 10px solid #F58420;">
                         {% endif %}
                         {% if program.image3 %}
-                        <img class="img-fluid mb-4 past_program_img" src="{{ program.image3.url }}" alt="" style="border: 10px solid #F58420;">
+                        <img class="img-fluid mb-4 past_program_img" id="past_program_img_3" src="{{ program.image3.url }}" alt="" style="border: 10px solid #F58420;">
                         {% endif %}
                         {% if program.image4 %}
-                            <img class="img-fluid mb-3 past_program_img" src="{{ program.image4.url }}" alt="" style="border: 10px solid #F58420;">
+                            <img class="img-fluid mb-3 past_program_img" id="past_program_img_4" src="{{ program.image4.url }}" alt="" style="border: 10px solid #F58420;">
+                        {% endif %}
+                        {% if program.image5 %}
+                            <img class="img-fluid mb-3 past_program_img" id="past_program_img_5" src="{{ program.image5.url }}" alt="" style="border: 10px solid #F58420;">
+                        {% endif %}
+                        {% if program.image6 %}
+                            <img class="img-fluid mb-3 past_program_img" id="past_program_img_6" src="{{ program.image6.url }}" alt="" style="border: 10px solid #F58420;">
                         {% endif %}
 
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <p class="card_description">{{ program.description }} In pursuance of the focus on connecting school-based knowledge to life outside the school, making learning of Science and Mathematics a joyful and meaningful activity; to bring focus to innovation and use of technology, the Ministry of Human Resource Development has set up Rashtriya Avishkar Abhiyan (RAA)</p>
-                    <div class="card_partners my-3">
-                        <div class="d-flex justify-content-around align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid mr-3" src="{% static 'img/past_programs/assam.png' %}" style="width: 7rem;" alt="">
-                                <p class="d-flex" style="color: #F58420; font-size: 1.5rem;">{{ program.state }}</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid mr-3" src="{% static 'img/home/statistics/districts.png' %}" style="width: 3rem;" alt="">
-                                <p class="d-flex" style="color: #F58420; font-size: 1.5rem;">{{ program.district_participated }} DISTRICTS</p>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-around flex-wrap p-4 project-statistics mb-3">
-                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
-                                <img class="img-fluid mr-2" src="{% static 'img/home/statistics/school.png' %}" alt="">
+                <div class="col-lg-7">
+                    <p class="card_description text-justify">{{ program.description }} </p>
+                    <div class="card_partners my-4">
+                        <div class="project-statistics-container h-100 w-100 ">
+                            <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
+                                <img class="img-fluid mr-2 " src="{% static 'img/home/statistics/school.png' %}" alt="">
                                 <div class="d-flex flex-column">
-                                    <h5>{{ program.schools_participated }}+</h5>
+                                    <p class="mb-0">{{ program.schools_participated }}+</p>
                                     <small>Schools </small>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
-                                <img class="img-fluid mr-2" src="{% static 'img/home/statistics/students.png' %}" alt="">
+                            <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
+                                <img class="img-fluid mr-2 " src="{% static 'img/home/statistics/students.png' %}" alt="">
                                 <div class="d-flex flex-column">
-                                    <h5>{{program.students_trained}}+</h5>
+                                    <p class="mb-0">{{program.students_trained}}+</p>
                                     <small>Students <br>Trained</small>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center p-3 shadow" style="border-radius: 30px;">
-                                <img class="img-fluid mr-2" src="{% static 'img/home/statistics/teachers.png' %}" alt="">
-                                <div class="d-flex flex-column">
-                                    <h5>{{program.teachers_trained}}+</h5>
+                            <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
+                                <img class="img-fluid mr-2 " src="{% static 'img/home/statistics/teachers.png' %}" alt="">
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <p class="mb-0">{{program.teachers_trained}}+</p>
                                     <small>Teachers <br>Trained</small>
                                 </div>
                             </div>
+                            <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
+                                <img class="img-fluid mr-2 " src="{% static 'img/past_programs/assam.png' %}" alt="">
+                                <p class="d-flex">{{ program.state }}</p>
+                            </div>
+                            <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
+                                <img class="img-fluid mr-2 " src="{% static 'img/home/statistics/districts.png' %}" alt="">
+                                <p class="d-flex">{{ program.district_participated }} DISTRICTS</p>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="mb-5">
+                    <div class="mb-5 content_headings">
                         <h3 style="color: #F58420;">SUPPORT</h3>
                         <div class="d-flex flex-wrap shadow" style="border-radius: 30px;">
-                            <div class="partner-logo d-flex flex-wrap p-2">
+                            <div class="partner-logo d-flex justify-content-center flex-wrap p-2">
                                 {% for partner in program.partner.all %}
-                                <img class="mr-3 mb-3 img-fluid" style="object-fit: contain;" src="{{ partner.logo.url }}" alt="">
+                                <img class="mb-3 img-fluid" src="{{ partner.logo.url }}" alt="partner logo">
                                 {% endfor %}
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div class=" content_headings">
                         <h3 style="color: #F58420;">OBJECTIVE</h3>
-                        <ul>
-                            <li>Empower teachers to establish Tinkering Labs in their respective schools</li>
-                            <li>Foster scientific temperament and 21st-century skills among students</li>
-                            <li>Integrate activities into the curriculum for experiential learning, nurturing creativity, critical thinking, problem-solving, and collaboration.</li>
-                            <li>Experience 'learning-by-doing' and think 'out-of-box'</li>
-                        </ul>
+                        <p>{{ program.objective|safe }}</p>
                     </div>
-                    <div>
+                    <div class=" content_headings mb-5">
                         <h3 style="color: #F58420;">ACTION</h3>
-                        <p>In 2021, the implementation of Tinkering Labs was initiated in 102 schools in Assam. With continued efforts, the initiative expanded to 51 new schools in 2022 and in 2023, Tinkering Lab implementation further expanded to 69 schools. </p>
-                        <p>3 teachers on average from each school attended a 5-day residential training program at IIT Guwahati. Furthermore, Tinkering lab kits were delivered and installed in all schools, and all nominated students underwent physical training in their respective schools</p>
+                        <p>{{ program.action|safe }}</p>
                     </div>
-                    <div>
+                    <div class=" content_headings">
                         <h3 style="color: #F58420;">IMPACT</h3>
-                        <p>{{program.impact}} Tinkering Lab is a creative and hands-on learning space where individuals can explore, experiment, and invent using a wide range of tools, materials, and technologies. Through hands-on activities and projects, Tinkering Labs encourage innovation, curiosity, and a deep understanding of concepts across various disciplines</p>
+                        <p class="text-justify">{{program.impact}}</p>
                     </div>
                 </div>
             </div>
@@ -132,26 +131,22 @@
 
 
     <section id="upcoming_projects" class="my-5">
-        <div class="container">
-            <div class="upcoming_project_heading">
-                <p class="text-center" style="font-size: 60px;">Our<span style="color: #F58420;"> Upcoming  </span>Projects:</p>
-                <p class="text-center text-muted" style="font-size: 30px;">Unveiling New Projects for Boundless Growth and Learning!</p>
-            </div>
+        <div class="container p-5">
+            <p class="text-center section_heading">Our<span style="color: #F58420;"> Upcoming  </span>Projects:</p>
+            <p class="text-center text-muted section_subheading">Unveiling New Projects for Boundless Growth and Learning!</p>
             <div class="upcoming_project_cards my-5">
-
-
                 {% for program in upcoming_programs %}
                 <div class="d-flex my-5 justify-content-center align-items-center community_card_container {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
-                    <img class="upcoming_project_img mb-4 {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
+                    <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
                     <div class="d-flex flex-column">
-                        <h3 class="upcoming_project_heading">{{program.heading}}</h3>
-                        <p class="upcoming_project_description text-muted"> {{ program.description }} </p>
+                        <p class="community_card_heading">{{program.heading}}</p>
+                        <p class="community_card_description text-muted"> {{ program.description }} </p>
                     </div>
                 </div>
 
                 {% empty %}
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
-                <h2 class="text-muted">No Community Programs !!!</h2>
+                <h2 class="text-muted">No Upcoming Programs !!!</h2>
                 <div class="my-5" style="border: 1px solid rgba(0, 0, 0, 0.3);"></div>
                 {% endfor %}
 

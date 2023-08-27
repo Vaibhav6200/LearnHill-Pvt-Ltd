@@ -43,9 +43,7 @@ class Program(models.Model):
     district_participated = models.CharField(max_length=10, blank=True, null=True)
     state = models.CharField(max_length=100, blank=True, null=True)
     # state_image = models.ImageField(upload_to='state_images', help_text="upload image of state for past program page")
-
     partner = models.ManyToManyField(Partner, blank=True)
-
     objective = RichTextField(blank=True, null=True)
     action = RichTextField(blank=True, null=True)
     impact = models.TextField(blank=True, null=True)
@@ -55,6 +53,8 @@ class Program(models.Model):
     image4 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
     # image5 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
     # image6 = models.ImageField(upload_to='project_image', blank=True, null=True, help_text="Extra Image to Adjust Past Program Page")
+    # hash_color_text = models.CharField(max_length=10, blank=True, null=True)
+    # hash_color_background = models.CharField(max_length=10, blank=True, null=True)
 
     start_date = models.DateField()
     end_date = models.DateField()

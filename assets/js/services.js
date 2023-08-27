@@ -47,7 +47,11 @@ function centuryCard1(){
     document.getElementById('execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
 
-    // document.getElementById('programs_card_1').insertAdjacentHTML('beforeend', service_card_html) = "Century-old Inspiration";
+    html = `<img class="project_image_1" src="/static/img/services/century/TL_Lab/Image1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/century/TL_Lab/Image2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/century/TL_Lab/Image3.jpg" alt="">`
+
+    document.getElementById('program_image_set_1').innerHTML = html
 }
 
 function centuryCard2(){
@@ -58,6 +62,13 @@ function centuryCard2(){
     document.getElementById('execution_point_4').innerHTML = "Student Training Program";
     document.getElementById('execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/century/AI_Lab/Image1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/century/AI_Lab/Image2.jpeg" alt="">
+    <img class="project_image_3" src="/static/img/services/century/AI_Lab/Image3.jpg" alt="">`
+
+    document.getElementById('program_image_set_1').innerHTML = html
 }
 
 function centuryCard3(){
@@ -68,6 +79,13 @@ function centuryCard3(){
     document.getElementById('execution_point_4').innerHTML = "Student Training Program";
     document.getElementById('execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/century/stem_activities/stem_image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/century/stem_activities/stem_image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/century/stem_activities/stem_image_3.jpeg" alt="">`
+
+    document.getElementById('program_image_set_1').innerHTML = html
 }
 
 function centuryCard4(){
@@ -79,6 +97,13 @@ function centuryCard4(){
     document.getElementById('execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('execution_point_6').innerHTML = "HACKATHON, PROTOTYPING, COMPETITIONS";
 
+
+    html = `<img class="project_image_1" src="/static/img/services/century/design_and_printing/Image1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/century/design_and_printing/Image2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/century/design_and_printing/Image3.jpg" alt="">`
+
+    document.getElementById('program_image_set_1').innerHTML = html
+
 }
 
 function centuryCard5(){
@@ -89,6 +114,13 @@ function centuryCard5(){
     document.getElementById('execution_point_4').innerHTML = "Student Training Program";
     document.getElementById('execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('execution_point_6').innerHTML = "HACKATHON, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/century/electronics_and_coding/Image1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/century/electronics_and_coding/Image2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/century/electronics_and_coding/Image3.jpg" alt="">`
+
+    document.getElementById('program_image_set_1').innerHTML = html
 }
 
 
@@ -101,6 +133,13 @@ function stemCard1(){
     document.getElementById('stem_execution_point_4').innerHTML = "Student Training Program";
     document.getElementById('stem_execution_point_5').innerHTML = "Year-long Handholding";
     document.getElementById('stem_execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/stem/science_club/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/stem/science_club/image_2.jpeg" alt="">
+    <img class="project_image_3" src="/static/img/services/stem/science_club/image_3.jpeg" alt="">`
+
+    document.getElementById('program_image_set_2').innerHTML = html
 }
 
 function stemCard2(){
@@ -111,6 +150,13 @@ function stemCard2(){
     document.getElementById('stem_execution_point_4').innerHTML = "Workshop";
     document.getElementById('stem_execution_point_5').innerHTML = "Showcase ";
     document.getElementById('stem_execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/stem/science_congress/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/stem/science_congress/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/stem/science_congress/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_2').innerHTML = html
 }
 
 function stemCard3(){
@@ -121,6 +167,13 @@ function stemCard3(){
     document.getElementById('stem_execution_point_4').innerHTML = "Student Training Program";
     document.getElementById('stem_execution_point_5').innerHTML = "Year-long Handholding ";
     document.getElementById('stem_execution_point_6').innerHTML = "COMPETITIONS, QUIZZES, PRESENTATIONS, SEMINARS, STATE-LEVEL EXHIBITIONS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/stem/stem_kits/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/stem/stem_kits/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/stem/stem_kits/image_3.jpeg" alt="">`
+
+    document.getElementById('program_image_set_2').innerHTML = html
 }
 
 function stemCard4(){
@@ -132,6 +185,12 @@ function stemCard4(){
     document.getElementById('stem_execution_point_5').innerHTML = "Final Showdown";
     document.getElementById('stem_execution_point_6').innerHTML = "DISTRICT LEVEL, STATE LEVEL, NATIONAL LEVEL, SEMINARS";
 
+
+    html = `<img class="project_image_1" src="/static/img/services/stem/quiz/image_1.jpeg" alt="">
+    <img class="project_image_2" src="/static/img/services/stem/quiz/image_2.jpeg" alt="">
+    <img class="project_image_3" src="/static/img/services/stem/quiz/image_3.jpeg" alt="">`
+
+    document.getElementById('program_image_set_2').innerHTML = html
 }
 
 function stemCard5(){
@@ -142,6 +201,13 @@ function stemCard5(){
     document.getElementById('stem_execution_point_4').innerHTML = "Qualifying Rounds";
     document.getElementById('stem_execution_point_5').innerHTML = "Final Showdown";
     document.getElementById('stem_execution_point_6').innerHTML = "DISTRICT LEVEL, STATE LEVEL, NATIONAL LEVEL, SEMINARS";
+
+
+    html = `<img class="project_image_1" src="/static/img/services/stem/olympiads/image_1.jpeg" alt="">
+    <img class="project_image_2" src="/static/img/services/stem/olympiads/image_2.jpeg" alt="">
+    <img class="project_image_3" src="/static/img/services/stem/olympiads/image_3.jpeg" alt="">`
+
+    document.getElementById('program_image_set_2').innerHTML = html
 }
 
 
@@ -158,6 +224,13 @@ function skillCard1(){
     document.getElementById('skill_execution_point_5').innerHTML = "Soft Skills Training ";
     document.getElementById('skill_execution_point_6').innerHTML = "SPOKEN ENGLISH, PRESENTATION, COMMUNICATION, EMPLOYABILITY SKILLS";
     document.getElementById('skill_execution_container').style.display = 'block';
+
+
+    html = `<img class="project_image_1" src="/static/img/services/skill/century/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/skill/century/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/skill/century/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_3').innerHTML = html
 }
 
 function skillCard2(){
@@ -169,21 +242,61 @@ function skillCard2(){
     document.getElementById('skill_execution_point_4').innerHTML = "Placement Opportunity";
     document.getElementById('skill_execution_point_5').innerHTML = "Soft Skills Training ";
     document.getElementById('skill_execution_point_6').innerHTML = "SPOKEN ENGLISH, PRESENTATION, COMMUNICATION, EMPLOYABILITY SKILLS";
+
+    html = `<img class="project_image_1" src="/static/img/services/skill/robotics/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/skill/robotics/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/skill/robotics/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_3').innerHTML = html
 }
 
 function skillCard3(){
     document.getElementById('skill_service_card_heading').innerHTML = "Developing an entrepreneurial mindset involves cultivating traits like creativity, innovation, risk-taking, and adaptability. Skill development programs may include activities that foster entrepreneurial thinking, idea generation, business planning, and the fundamentals of starting and managing a business.";
     document.getElementById('skill_execution_container').style.display = 'none';
+
+
+    html = `<img class="project_image_1" src="/static/img/services/skill/entrepreneurial_mindset/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/skill/entrepreneurial_mindset/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/skill/entrepreneurial_mindset/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_3').innerHTML = html
 }
 
 function skillCard4(){
     document.getElementById('skill_service_card_heading').innerHTML = "These programs focus on improving individuals' employability skills, including resume writing, interview preparation, effective communication, time management, teamwork, and professional etiquette. The aim is to prepare individuals for the job market and help them succeed in their chosen careers.";
     document.getElementById('skill_execution_container').style.display = 'none';
+
+    html = `<img class="project_image_1" src="/static/img/services/skill/skills_training/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/skill/skills_training/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/skill/skills_training/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_3').innerHTML = html
 }
 
 function skillCard5(){
     document.getElementById('skill_service_card_heading').innerHTML = "Skill development programs often include job placement services or collaborations with employers to facilitate the transition of individuals into the workforce. This can involve job search assistance, career counseling, networking opportunities, and internships or apprenticeships to gain practical experience.";
     document.getElementById('skill_execution_container').style.display = 'none';
+
+    html = `<img class="project_image_1" src="/static/img/services/skill/placements/image_1.jpg" alt="">
+    <img class="project_image_2" src="/static/img/services/skill/placements/image_2.jpg" alt="">
+    <img class="project_image_3" src="/static/img/services/skill/placements/image_3.jpg" alt="">`
+
+    document.getElementById('program_image_set_3').innerHTML = html
 }
 
 
+function showImageSet1(){
+    document.getElementById('img_set_1').style.display = 'block';
+    document.getElementById('img_set_2').style.display = 'none';
+    document.getElementById('img_set_3').style.display = 'none';
+    document.getElementById('img_set_4').style.display = 'none';
+    document.getElementById('img_set_5').style.display = 'none';
+}
+
+function showImageSet2(){
+    document.getElementById('img_set_1').style.display = 'none';
+    document.getElementById('img_set_2').style.display = 'block';
+    document.getElementById('img_set_3').style.display = 'none';
+    document.getElementById('img_set_4').style.display = 'none';
+    document.getElementById('img_set_5').style.display = 'none';
+}

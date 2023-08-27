@@ -75,26 +75,23 @@
             <div class="container my-5"><h3 class="text-center">21st Century Skill Programs are educational initiatives designed to equip students with the skills and competencies necessary for success in the modern world.</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard1()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/tinkering.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/century/TL_Lab/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Tinkering Lab</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard2()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/ai_lab.jpeg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/century/AI_Lab/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">AI Lab</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard3()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/stem.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/century/stem_activities/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">STEM Lab</h5>
                 </div>
             </div>
 
             <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
                 <div class="row">
-                    <div class="col-lg-6 program_image d-flex flex-column">
-                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                    </div>
+                    <div class="col-lg-6 program_image d-flex flex-column" id="program_image_set_1"></div>
+
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <h2 id="service_card_heading"></h2>
                         <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
@@ -113,11 +110,11 @@
 
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard4()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/3d_design.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/century/design_and_printing/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">3D Design & Printing</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="centuryCard5()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/electronics.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/century/electronics_and_coding/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Electronics & Coding</h5>
                 </div>
             </div>
@@ -128,26 +125,22 @@
             <div class="container my-5"><h3 class="text-center">STEM Activities are educational initiatives that focus on engaging students in science, technology, engineering, and mathematics (STEM) learning.</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard1()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/club.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/stem/science_club/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Science/Maths Clubs</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard2()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/science_congress.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/stem/science_congress/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Science Congress</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard3()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/stem_kits.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/stem/stem_kits/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">STEM Kits</h5>
                 </div>
             </div>
 
             <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
                 <div class="row">
-                    <div class="col-lg-6 program_image d-flex flex-column">
-                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                    </div>
+                    <div class="col-lg-6 program_image d-flex flex-column"  id="program_image_set_2"></div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <h2 id="stem_service_card_heading"></h2>
                         <div class="container p-0" style="background-color: #F58420; border-radius: 20px;">
@@ -166,11 +159,11 @@
 
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard4()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/quiz_completion.jpeg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/stem/quiz/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">State/National Quiz</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="stemCard5()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/science_olympiad.jpeg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/stem/olympiads/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">State/National Olympiad</h5>
                 </div>
             </div>
@@ -181,26 +174,22 @@
             <div class="container my-5"><h3 class="text-center">Skills Development Program focuses on improving the skills and qualifications of individuals to improve employability and career opportunities. Here are some components commonly found in such programs:</h3></div>
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard1()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/21st_century.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/skill/century/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">21st Century Skill Training</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard2()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/robotics.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/skill/robotics/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Coding, Robotics, AI, Automation</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard3()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/skill/entrepreneurial_mindset/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Entrepreneurial Mindset</h5>
                 </div>
             </div>
 
             <div class="container my-5 p-5 border shadow" style="background-color: white; border-radius: 20px;">
                 <div class="row">
-                    <div class="col-lg-6 program_image d-flex flex-column">
-                        <img class="project_image_1" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_2" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                        <img class="project_image_3" src="{% static 'img/programs/program_1.jpg' %}" alt="">
-                    </div>
+                    <div class="col-lg-6 program_image d-flex flex-column" id="program_image_set_3"></div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <h2 id="skill_service_card_heading"></h2>
                         <div class="container p-0" id="skill_execution_container" style="background-color: #F58420; border-radius: 20px;">
@@ -219,11 +208,11 @@
 
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard4()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/skill/skills_training/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Employability Skills Training</h5>
                 </div>
                 <div class="d-flex flex-column align-items-center programs_card" onclick="skillCard5()" style="cursor: pointer;">
-                    <img class="card-img-top img-fluid" src="{% static 'img/programs/.jpg' %}" alt="Card image cap">
+                    <img class="card-img-top img-fluid" src="{% static 'img/services/skill/placements/card.jpg' %}" alt="Card image cap">
                     <h5 class="card-title text-center px-3 py-2 my-4">Job Placement</h5>
                 </div>
             </div>

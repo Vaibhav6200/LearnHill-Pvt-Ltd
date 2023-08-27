@@ -96,3 +96,43 @@
     border-bottom-right-radius: 20px;
     width: 70%;
 }
+
+
+
+.lms_card{
+  width: 80%;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+
+
+.lms_heading{
+  @media (max-width: 576px) {
+      font-size: 23px;
+  }
+  @media (min-width: 576px) {
+      font-size: 27px;
+  }
+  @media (min-width: 767px) {
+      font-size: 31px;
+  }
+  @media (min-width: 992px) {
+      font-size: 35px;
+  }
+}
+
+.lms_subheading{
+  @media (max-width: 576px) {
+      font-size: 18px;
+  }
+  @media (min-width: 576px) {
+      font-size: 22px;
+  }
+  @media (min-width: 767px) {
+      font-size: 26px;
+  }
+  @media (min-width: 992px) {
+      font-size: 30px;
+  }
+}

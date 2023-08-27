@@ -95,7 +95,7 @@
                     <div class="mb-5 content_headings">
                         <h3 style="color: #F58420;">SUPPORT</h3>
                         <div class="d-flex flex-wrap shadow" style="border-radius: 30px;">
-                            <div class="partner-logo d-flex justify-content-center flex-wrap p-2">
+                            <div class="partner-logo d-flex flex-wrap p-2">
                                 {% for partner in program.partner.all %}
                                 <img class="mb-3 img-fluid" src="{{ partner.logo.url }}" alt="partner logo">
                                 {% endfor %}
@@ -109,7 +109,7 @@
                     </div>
                     <div class=" content_headings mb-5">
                         <h3 style="color: #F58420;">ACTION</h3>
-                        <p>{{ program.action|safe }}</p>
+                        <p class="text-justify">{{ program.action|safe }}</p>
                     </div>
                     <div class=" content_headings">
                         <h3 style="color: #F58420;">IMPACT</h3>
@@ -140,7 +140,7 @@
                     <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
                     <div class="d-flex flex-column">
                         <p class="community_card_heading">{{program.heading}}</p>
-                        <p class="community_card_description text-muted"> {{ program.description }} </p>
+                        <p class="community_card_description text-muted text-justify"> {{ program.description }} </p>
                     </div>
                 </div>
 

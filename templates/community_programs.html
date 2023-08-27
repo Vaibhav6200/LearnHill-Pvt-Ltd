@@ -33,9 +33,9 @@
             <div class="my-5 d-flex justify-content-center align-items-center community_card_container {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
                 <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
 
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column px-4">
                     <p class="community_card_heading">{{program.heading}}</p>
-                    <p class="community_card_description text-muted"> {{ program.description }} </p>
+                    <p class="community_card_description text-muted text-justify"> {{ program.description }} </p>
                 </div>
             </div>
 

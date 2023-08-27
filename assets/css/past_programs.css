@@ -102,6 +102,11 @@
   object-fit: contain;
 }
 
+.partner-logo{
+  @media (max-width: 576px) {
+    justify-content: center;
+  }
+}
 
 
 /* Past Program Card Images (left Side) */

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import *
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def index(request):
@@ -39,6 +41,28 @@ def community_programs(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        full_name = request.POST.get('full_name')
+        client_email = request.POST.get('email')
+        country = request.POST.get('country')
+        state = request.POST.get('state')
+        org_name = request.POST.get('org_name')
+        phone_number = request.POST.get('phone')
+        message = request.POST.get('query')
+        mail_subject = f"LearnHill Query: from '{full_name}'"
+        message += f"\n\nClient Email: {client_email}\nClient Phone: {phone_number}\nState: {state}\nCountry: {country}\nOrganisation Name: {org_name}"
+        to_email = settings.EMAIL_HOST_USER
+
+        print(message)
+
+        send_mail(
+            subject=mail_subject,
+            message=message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[to_email],
+            fail_silently=False,
+        )
+
     return render(request, 'contact.html')
 
 

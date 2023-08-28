@@ -120,26 +120,26 @@
                                 <div class="carousel-item">
                                 {% endif %}
 
-                                    <div class="container px-5 py-3 border card_container">
+                                    <div class="container px-5 py-3 border card_container" style="background-color: {{ program.hash_color_background }};">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 justify-content-center align-items-center d-flex">
-                                                <img class="img-fluid card_image_main" src="{{ program.image1.url }}" style="border-radius: 30px;" alt="">
+                                                <img class="img-fluid card_image_main" src="{{ program.image1.url }}" style="border-color: {{ program.hash_color_text }};" alt="">
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="d-flex flex-column">
-                                                    <p class="mb-3 card_heading">{{program.heading}} <br> {{ program.start_date|date:"Y" }}-{{ program.end_date|date:"y" }} </p>
+                                                    <p class="mb-3 card_heading" style="color: {{ program.hash_color_text }};">{{program.heading}} <br> {{ program.start_date|date:"Y" }}-{{ program.end_date|date:"y" }} </p>
                                                     <div class="d-flex align-items-center justify-content-between shadow px-4 py-3 mb-3 bg-white" style="border-radius: 30px;">
                                                         <img class="mr-5 img-fluid partner_card_image" src="{% static 'img/past_programs/assam.png' %}" alt="">
-                                                        <p class="partner_card_text">Assam</p>
+                                                        <p class="partner_card_text" style="color: {{ program.hash_color_text }};">Assam</p>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-between shadow px-4 py-3 mb-4 bg-white" style="border-radius: 30px;">
                                                         <img class="mr-5 img-fluid partner_card_image" src="{% static 'img/home/statistics/employment.png' %}" alt="">
                                                         <div class="d-flex flex-column align-items-center justify-content-center">
-                                                            <p class="partner_card_text">{{program.students_trained}}+</p>
-                                                            <div class="mb-0 text-center" style="color: #ED7D31;">Students Impacted</div>
+                                                            <p class="partner_card_text" style="color: {{ program.hash_color_text }};">{{program.students_trained}}+</p>
+                                                            <div class="mb-0 text-center" style="color: {{ program.hash_color_text }};">Students Impacted</div>
                                                         </div>
                                                     </div>
-                                                    <p style="margin-left: auto;"><a class="see_project_btn" href="{% url 'LearnHillApp:past_programs' %}" style="font-size: 20px;">See Projects <i class="fa fa-arrow-right"></i></a></p>
+                                                    <p style="margin-left: auto;"><a class="see_project_btn" href="{% url 'LearnHillApp:past_programs' %}" style="color: {{ program.hash_color_text }};">See Projects <i class="fa fa-arrow-right"></i></a></p>
                                                 </div>
                                             </div>
                                         </div>

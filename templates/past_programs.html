@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} past_programs {% endblock %}
+{% block title %} past programs {% endblock %}
 
 {% block extra_css %}
     <link rel='stylesheet' href="{% static 'css/past_programs.css' %}">
@@ -82,7 +82,8 @@
                                 </div>
                             </div>
                             <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">
-                                <img class="img-fluid mr-2 " src="{% static 'img/past_programs/assam.png' %}" alt="">
+                                <!-- <img class="img-fluid mr-2 " src="{% static 'img/past_programs/assam.png' %}" alt=""> -->
+                                <img class="img-fluid mr-2 " src="{{ program.state_image.url }}" alt="">
                                 <p class="d-flex">{{ program.state }}</p>
                             </div>
                             <div class="project-statistics-item mb-2 d-flex align-items-center justify-content-around p-3 shadow" style="border-radius: 30px;">

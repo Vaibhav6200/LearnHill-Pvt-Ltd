@@ -55,13 +55,13 @@ def contact(request):
 
         print(message)
 
-        send_mail(
-            subject=mail_subject,
-            message=message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[to_email],
-            fail_silently=False,
-        )
+        # send_mail(
+        #     subject=mail_subject,
+        #     message=message,
+        #     from_email=settings.EMAIL_HOST_USER,
+        #     recipient_list=[to_email],
+        #     fail_silently=False,
+        # )
 
     return render(request, 'contact.html')
 

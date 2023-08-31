@@ -67,6 +67,40 @@
 }
 
 
+#hero .banner_heading{
+  @media (max-width:576px) {
+    font-size: 7vw;
+  }
+  @media (min-width:576px) {
+    font-size: 4vw;
+  }
+  @media (min-width:768px) {
+      font-size: 3.5vw;
+  }
+  @media (min-width:992px) {
+      font-size: 3vw;
+  }
+}
+
+#hero .banner_subheading{
+
+  @media (max-width:576px) {
+    font-size: 5vw;
+  }
+  @media (min-width:576px) {
+    font-size: 4vw;
+  }
+  @media (min-width:768px) {
+      font-size: 3vw;
+  }
+  @media (min-width:992px) {
+      font-size: 2vw;
+  }
+}
+
+
+
+
 
 #enquiry .enquiry_image{
   @media(max-width: 800px){
@@ -172,6 +206,9 @@
 
 
 .service_heading{
+  border-bottom: 15px solid #F58420;
+  border-radius: 100px;
+
   margin-bottom: 100px;
 
   @media(min-width: 360px){

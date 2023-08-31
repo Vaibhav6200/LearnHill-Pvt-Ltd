@@ -17,21 +17,21 @@
 
             <div class="past_program_banner_content d-flex justify-content-center align-items-center px-4">
                 <div class="container d-flex flex-column">
-                    <p class="banner_heading mb-0">Unlock Innovation through</p>
-                    <p class="banner_heading" style="color: #F58420;">Inspiring Projects</p>
+                    <p class="banner_heading headings mb-0">Unlock Innovation through</p>
+                    <p class="banner_heading headings" style="color: #F58420;">Inspiring Projects</p>
                     <p class="banner_subheading">Explore the remarkable projects done by LearnHill Technologies. As the rapidly growing network of educators, students, and institutions, We creates extraordinary projects in coding, AI, robotics & more.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <p class="text-center my-5 section_heading"><span style="color: #F58420;">Past</span> Projects</p>
+    <p class="text-center my-5 section_heading headings"><span style="color: #F58420;">Past</span> Projects</p>
 
 
     <section id="past_program_cards" class="px-3">
         {% for program in past_programs %}
         <div class="container my-5" style="background-color: #F58420; border-radius: 20px 20px 40px 40px;">
-            <p class="text-center mb-0 py-3 text-white card_heading">{{ program.heading }}</p>
+            <p class="text-center mb-0 py-3 text-white card_heading headings">{{ program.heading }}</p>
             <div class="row py-5 px-3 border shadow" style="background-color: white; border-radius: 40px;">
                 <div class="col-lg-5 project-images">
                     <div class="d-flex flex-column">
@@ -94,7 +94,7 @@
 
                     </div>
                     <div class="mb-5 content_headings">
-                        <h3 style="color: #F58420;">SUPPORT</h3>
+                        <h3 style="color: #F58420;" class="headings">SUPPORT</h3>
                         <div class="d-flex flex-wrap shadow" style="border-radius: 30px;">
                             <div class="partner-logo d-flex flex-wrap p-2">
                                 {% for partner in program.partner.all %}
@@ -105,15 +105,15 @@
                     </div>
 
                     <div class=" content_headings">
-                        <h3 style="color: #F58420;">OBJECTIVE</h3>
+                        <h3 style="color: #F58420;" class="headings">OBJECTIVE</h3>
                         <p>{{ program.objective|safe }}</p>
                     </div>
                     <div class=" content_headings mb-5">
-                        <h3 style="color: #F58420;">ACTION</h3>
+                        <h3 style="color: #F58420;" class="headings">ACTION</h3>
                         <p class="text-justify">{{ program.action|safe }}</p>
                     </div>
                     <div class=" content_headings">
-                        <h3 style="color: #F58420;">IMPACT</h3>
+                        <h3 style="color: #F58420;" class="headings">IMPACT</h3>
                         <p class="text-justify">{{program.impact}}</p>
                     </div>
                 </div>
@@ -133,14 +133,14 @@
 
     <section id="upcoming_projects" class="my-5">
         <div class="container p-5">
-            <p class="text-center section_heading">Our<span style="color: #F58420;"> Upcoming  </span>Projects:</p>
+            <p class="text-center section_heading headings">Our<span style="color: #F58420;"> Upcoming  </span>Projects:</p>
             <p class="text-center text-muted section_subheading">Unveiling New Projects for Boundless Growth and Learning!</p>
             <div class="upcoming_project_cards my-5">
                 {% for program in upcoming_programs %}
                 <div class="d-flex my-5 justify-content-center align-items-center community_card_container {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
                     <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
                     <div class="d-flex flex-column">
-                        <p class="community_card_heading">{{program.heading}}</p>
+                        <p class="community_card_heading headings">{{program.heading}}</p>
                         <p class="community_card_description text-muted text-justify"> {{ program.description }} </p>
                     </div>
                 </div>

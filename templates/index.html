@@ -17,7 +17,7 @@
             {% include 'includes/navbar1.html' %}
             <div class="home_banner_content d-flex justify-content-center align-items-center">
                 <div class="container d-flex flex-column">
-                    <p class="home_banner_heading">Unlocking <span style="color: #F58420;" >Future Potential:</span> <br>Empowering the 21st Century Mind </p>
+                    <p class="home_banner_heading headings">Unlocking <span style="color: #F58420;" >Future Potential:</span> <br>Empowering the 21st Century Mind </p>
                     <p class="home_banner_subheading">Explore, Innovate, and excel through our cutting-edge skills, STEM activities, and skills development projects to prepare students for a successful future in a rapidly changing world.</p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
 
     <section id="statistics" style="margin: 100px 0px;">
         <div class="container my-5">
-            <h1 class="text-center mb-5 font-weight-bold">Statistics</h1>
+            <h1 class="text-center mb-5  headings">Statistics</h1>
 
             <div class="grid-container">
                 <div class="grid-item">
@@ -74,7 +74,7 @@
 
     <section id="about"  style="margin: 100px 0px;">
         <div class="container my-5">
-            <h1 class="text-center mb-5">About Learn<span style="color: #F58420;">Hill</span></h1>
+            <h1 class="text-center mb-5 headings">About Learn<span style="color: #F58420;">Hill</span></h1>
             <h3 class="text-muted text-center mb-3">Igniting the potential of the next generation through cutting-edge education services tailored to the K12 ecosystem</h3>
             <p class="text-justify mx-3">We go beyond traditional classrooms by setting up Innovation Labs, STEM Labs, and Tinkering Labs in schools. These dynamic learning environments encourage hands-on exploration, critical thinking, and problem-solving abilities. Our dedication extends beyond student enrichment. We also offer comprehensive skill training programs that empower students and educators alike to thrive in the digital age. Our commitment to bring meaningful impact extends to facilitating career pathways for our students and teachers. Through strategic partnerships and networking opportunities, we connect individuals with relevant job placements, ensuring that their newfound skills and talents are applied in real-world contexts.</p>
         </div>
@@ -82,7 +82,7 @@
 
 
     <section id="partners" style="margin: 100px 0px;">
-        <h1 class="text-center mb-5 font-weight-bold">Our Partners</h1>
+        <h1 class="text-center mb-5  headings">Our Partners</h1>
         <div class="container mt-5">
             <div class="d-flex justify-content-around mb-4 flex-wrap align-self-center">
 
@@ -104,7 +104,7 @@
     </section>
 
     <section id="projects" style="margin: 100px 0px;">
-        <h1 class="text-center mb-5 font-weight-bold">Past Projects</h1>
+        <h1 class="text-center mb-5  headings">Past Projects</h1>
 
         <div class="container">
 
@@ -127,7 +127,7 @@
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="d-flex flex-column">
-                                                    <p class="mb-3 card_heading" style="color: {{ program.hash_color_text }};">{{program.heading}} <br> {{ program.start_date|date:"Y" }}-{{ program.end_date|date:"y" }} </p>
+                                                    <p class="mb-3 card_heading headings" style="color: {{ program.hash_color_text }};">{{program.heading}} <br> {{ program.start_date|date:"Y" }}-{{ program.end_date|date:"y" }} </p>
                                                     <div class="d-flex align-items-center justify-content-between shadow px-4 py-3 mb-3 bg-white" style="border-radius: 30px;">
                                                         <img class="mr-5 img-fluid partner_card_image" src="{% static 'img/past_programs/assam.png' %}" alt="">
                                                         <p class="partner_card_text" style="color: {{ program.hash_color_text }};">Assam</p>
@@ -154,7 +154,7 @@
     </section>
 
     <section class="my-5" id="offerings">
-        <h1 class="text-center mb-5 font-weight-bold">Our Offerings</h1>
+        <h1 class="text-center mb-5 headings">Our Offerings</h1>
 
         <div class="container my-5 p-4">
             <div class="d-flex flex-wrap align-items-center justify-content-center">
@@ -163,7 +163,7 @@
                         <img class="card-img-top img-fluid mt-4" src="{% static 'img/programs/artificial-intelligence.png' %}" style="width: 130px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title text-center mb-4">21<sup>st</sup> Century Skill Programs</h4>
+                        <h4 class="card-title text-center mb-4 headings">21<sup>st</sup> Century Skill Programs</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
@@ -193,7 +193,7 @@
                         <img class="card-img-top img-fluid offering_img p-4" src="{% static 'img/programs/stem.png' %}" style="width: 160px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title mb-5 text-center">STEM Activities</h4>
+                        <h4 class="card-title mb-5 text-center headings">STEM Activities</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
@@ -223,7 +223,7 @@
                         <img class="card-img-top img-fluid offering_img" src="{% static 'img/programs/abilities.png' %}" style="width: 130px;" alt="Card image cap">
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title text-center mb-4">Skill Development Programs</h4>
+                        <h4 class="card-title text-center mb-4 headings">Skill Development Programs</h4>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fa-2x fa-solid fa-circle-check mr-3" style="color: #01AC3A;"></i>
@@ -253,7 +253,7 @@
     </section>
 
     <section class="my-5 p-5" id="expertise" style="background-color: #FFC04D;">
-        <h1 class="text-center mb-5 font-weight-bold">Our Expertise</h1>
+        <h1 class="text-center mb-5 headings">Our Expertise</h1>
 
         <div class="container">
             <div class="d-flex flex-wrap justify-content-around align-self-center">
@@ -311,7 +311,7 @@
 
 
     <section id="impact" style="margin: 100px 0px;">
-        <h1 class="text-center mb-5">Our Impact Programs</h1>
+        <h1 class="text-center mb-5 headings">Our Impact Programs</h1>
 
         <div class="container m-auto">
             <p class="mb-5">
@@ -322,7 +322,7 @@
             <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
                 <img class="img-fluid impact_img mr-5" style="border: 10px solid #F58420; border-radius: 30px;" src="{% static 'img/home/impact/Free upskilling.jpg' %}" alt="">
                 <div class="d-flex flex-column">
-                    <h3>Lab Revival</h3>
+                    <h3 class="headings">Lab Revival</h3>
                     <p>The Purpose of the Lab Revival Program is to bring new life to school laboratories by revitalizing and mordernizing them.</p>
                     <span>
                         <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>
@@ -331,7 +331,7 @@
             </div>
             <div class="d-flex justify-content-center align-items-center my-5 impact_container impact_img_2_container">
                 <div class="d-flex flex-column">
-                    <h3>Free Upskilling</h3>
+                    <h3 class="headings">Free Upskilling</h3>
                     <p>Free Upskilling Program addresses education and skill gaps by providing individuals with inclusive and modern learning opportunities.</p>
                     <span>
                         <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>
@@ -342,7 +342,7 @@
             <div class="d-flex justify-content-center align-items-center mb-5 impact_container">
                 <img class="img-fluid impact_img mr-5" style="border: 10px solid #F58420; border-radius: 30px;" src="{% static 'img/home/impact/Student literacy.jpg' %}" alt="">
                 <div class="d-flex flex-column">
-                    <h3>Student Literacy</h3>
+                    <h3 class="headings">Student Literacy</h3>
                     <p>Student Literacy is Foundational Skill that empowers individuals, fosters critical thinking, and supports academic and personal Growth</p>
                     <span>
                         <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>

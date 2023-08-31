@@ -17,14 +17,14 @@
 
             <div class="community_banner_content d-flex justify-content-center align-items-center px-4">
                 <div class="container d-flex flex-column">
-                    <p class="community_banner_heading"> Community Power: Joining Hands, <br><span style="color: #F58420;">Changing Lives!</span>  </p>
-                    <p class="community_banner_subheading">Through inclusive education, skill development, and access to essential services, we empower individuals to reach their full potential, uplifting communities and creating a legacy of empowerment for generations to come.</p>
+                    <p class="banner_heading headings"> Community Power: Joining Hands, <br><span style="color: #F58420;">Changing Lives!</span>  </p>
+                    <p class="banner_subheading">Through inclusive education, skill development, and access to essential services, we empower individuals to reach their full potential, uplifting communities and creating a legacy of empowerment for generations to come.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <h1 class="text-center main_community_heading"><span style="color: #F58420;">Community</span> Projects</h1>
+    <h1 class="text-center main_community_heading headings"><span style="color: #F58420;">Community</span> Projects</h1>
 
     <section class="my-5" id="community_projects">
         <div class="container">
@@ -34,7 +34,7 @@
                 <img class="community_img mb-4 img-fluid {% if forloop.counter|divisibleby:2 %}ml-md-5{% else %}mr-md-5{% endif %}" src="{{ program.image1.url }}" alt="">
 
                 <div class="d-flex flex-column px-4">
-                    <p class="community_card_heading">{{program.heading}}</p>
+                    <p class="community_card_heading headings">{{program.heading}}</p>
                     <p class="community_card_description text-muted text-justify"> {{ program.description }} </p>
                 </div>
             </div>

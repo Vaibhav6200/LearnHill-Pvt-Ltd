@@ -33,35 +33,35 @@
                 <div class="grid-item">
                     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                         <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/states.png' %}" alt="">
-                        <h5>{{ statistics.states_covered }}+</h5>
-                        <h5 class="text-center">States Covered</h5>
+                        <h2>{{ statistics.states_covered }}+</h2>
+                        <h5 class="text-center">States <br> Covered</h5>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                         <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/school.png' %}" alt="">
-                        <h5>{{ statistics.schools }}+</h5>
+                        <h2>{{ statistics.schools }}+</h2>
                         <h5 class="text-center">Schools</h5>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                         <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/teachers.png' %}" alt="">
-                        <h5>{{ statistics.teachers_trained }}+</h5>
+                        <h2>{{ statistics.teachers_trained }}+</h2>
                         <h5 class="text-center">Teachers <br>Trained</h5>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                         <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/students.png' %}" alt="">
-                        <h5>{{ statistics.students_impacted }}+</h5>
+                        <h2>{{ statistics.students_impacted }}+</h2>
                         <h5 class="text-center">Student <br>Impacted</h5>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="d-flex flex-column justify-content-center align-items-center mb-4">
                         <img class="mb-2" style="width: 80px;" src="{% static 'img/home/statistics/employment.png' %}" alt="">
-                        <h5>{{ statistics.employment_generated }}+</h5>
+                        <h2>{{ statistics.employment_generated }}+</h2>
                         <h5 class="text-center">Employment <br>Generated</h5>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         <img class="partner_image" src="{{ partner.logo.url }}" alt="Avatar">
                       </div>
                       <div class="flip-card-back d-flex justify-content-center align-items-center">
-                        <h2 class="p-4">{{ partner.name }}</h2>
+                        <h2 class="p-3">{{ partner.name }}</h2>
                       </div>
                     </div>
                   </div>
@@ -325,7 +325,7 @@
                     <h3>Lab Revival</h3>
                     <p>The Purpose of the Lab Revival Program is to bring new life to school laboratories by revitalizing and mordernizing them.</p>
                     <span>
-                        <button class="btn text-white" style="background-color: #F58420;">Explore More</button>
+                        <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>
                     </span>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                     <h3>Free Upskilling</h3>
                     <p>Free Upskilling Program addresses education and skill gaps by providing individuals with inclusive and modern learning opportunities.</p>
                     <span>
-                        <button class="btn text-white" style="background-color: #F58420;">Explore More</button>
+                        <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>
                     </span>
                 </div>
                 <img class="img-fluid impact_img ml-5" style="border: 10px solid #F58420; border-radius: 30px;" src="{% static 'img/home/impact/Lab revival.jpg' %}" alt="">
@@ -345,7 +345,7 @@
                     <h3>Student Literacy</h3>
                     <p>Student Literacy is Foundational Skill that empowers individuals, fosters critical thinking, and supports academic and personal Growth</p>
                     <span>
-                        <button class="btn text-white" style="background-color: #F58420;">Explore More</button>
+                        <a href="{% url 'LearnHillApp:community_programs' %}" class="btn text-white" style="background-color: #F58420;">Explore More</a>
                     </span>
                 </div>
             </div>

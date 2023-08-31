@@ -28,11 +28,11 @@
     <p class="text-center my-5 section_heading"><span style="color: #F58420;">Past</span> Projects</p>
 
 
-    <section id="past_program_cards">
+    <section id="past_program_cards" class="px-3">
         {% for program in past_programs %}
         <div class="container my-5" style="background-color: #F58420; border-radius: 20px 20px 40px 40px;">
             <p class="text-center mb-0 py-3 text-white card_heading">{{ program.heading }}</p>
-            <div class="row p-5 border shadow" style="background-color: white; border-radius: 40px;">
+            <div class="row py-5 px-3 border shadow" style="background-color: white; border-radius: 40px;">
                 <div class="col-lg-5 project-images">
                     <div class="d-flex flex-column">
                         {% if program.image1 %}

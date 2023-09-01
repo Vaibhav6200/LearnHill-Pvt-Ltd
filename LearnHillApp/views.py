@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.core.mail import send_mail
 from django.conf import settings
+from django.contrib import messages
 
 
 def index(request):
@@ -62,6 +63,7 @@ def contact(request):
         #     recipient_list=[to_email],
         #     fail_silently=False,
         # )
+        messages.success(request, "Your Query has been Recorded")
 
     return render(request, 'contact.html')
 

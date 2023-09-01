@@ -84,3 +84,15 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactMessage(models.Model):
+    full_name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=150)
+    country = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    org_name = models.CharField(max_length=255)
+    mobile_number = models.CharField(max_length=20)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

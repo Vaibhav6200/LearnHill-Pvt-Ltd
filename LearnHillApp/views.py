@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.core.mail import send_mail
 from django.conf import settings
@@ -51,20 +51,21 @@ def contact(request):
         phone_number = request.POST.get('phone')
         message = request.POST.get('query')
         mail_subject = f"LearnHill Query: from '{full_name}'"
-        message += f"\n\nClient Email: {client_email}\nClient Phone: {phone_number}\nState: {state}\nCountry: {country}\nOrganisation Name: {org_name}"
+        message += f"\n\nClient Email: {client_email}\nClient Phone: {phone_number}\nState: {state}\nCountry: {country}\nOrganization Name: {org_name}"
         to_email = settings.EMAIL_HOST_USER
 
         print(message)
 
-        # send_mail(
-        #     subject=mail_subject,
-        #     message=message,
-        #     from_email=settings.EMAIL_HOST_USER,
-        #     recipient_list=[to_email],
-        #     fail_silently=False,
-        # )
+        send_mail(
+            subject=mail_subject,
+            message=message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[to_email],
+            fail_silently=False,
+        )
+        ContactMessage.objects.create(full_name=full_name, email=client_email, country=country, state=state, org_name=org_name, mobile_number=phone_number, message=message)
         messages.success(request, "Your Query has been Recorded")
-
+        # return redirect('/')
     return render(request, 'contact.html')
 
 

@@ -144,13 +144,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'vaibhavpaliwal620@gmail.com'
-EMAIL_HOST_PASSWORD = 'rkcqzierepielpvf'
-
-# EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
-# EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
-
-# EMAIL_HOST_USER = 'coreteam@learnhill.in'
-# EMAIL_HOST_PASSWORD = "rwvszkgbiurxhzyu"
-# DEFAULT_FROM_EMAIL = 'coreteam@learnhill.in'
-
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
